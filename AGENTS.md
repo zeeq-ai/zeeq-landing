@@ -16,6 +16,12 @@ Also available:
 - <https://ui.nuxt.com/llms.txt> (more efficient, quick overview)
 - <https://ui.nuxt.com/llms-full.txt>
 
+## Firebase
+
+This application deploys as a static website to Firebase hosting.
+
+- `firebase.json` and `.firebaserc` are the Firebase configuration files
+
 ## Key Design Rules
 
 - Use Nuxt UI components whenever possible and use docs to get props, slots, API
