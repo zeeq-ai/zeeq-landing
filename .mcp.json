@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "nuxt-ui-remote": {
+      "type": "http",
+      "url": "https://ui.nuxt.com/mcp"
+    },
+    "playwright": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest",
+        "--extension"
+      ],
+      "env": {}
+    }
+  }
+}
