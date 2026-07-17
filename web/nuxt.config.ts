@@ -56,6 +56,15 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2026-06-30',
 
+  vite: {
+    server: {
+      cors: {
+        origin: ['https://aspire.dev.internal', 'http://aspire.dev.internal'],
+      },
+      allowedHosts: ['aspire.dev.internal'],
+    },
+  },
+
   eslint: {
     config: {
       stylistic: {
