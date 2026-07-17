@@ -27,3 +27,6 @@ logs
 .history
 
 .playwright-mcp/
+
+
+.firebase/
