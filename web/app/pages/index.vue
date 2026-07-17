@@ -22,7 +22,7 @@
           },
           {
             label: 'Get started',
-            to: 'https://github.com/zeeq-ai/zeeq-app',
+            to: 'https://app.zeeq.ai/docs/getting-started/introduction',
             target: '_blank',
             icon: 'i-hugeicons-book-open-01',
             size: 'xl',
@@ -42,7 +42,7 @@
 
     <UPageSection
       id="features"
-      title="Elevated AI coding performance for agentic engineering teams."
+      title="Elevate AI coding performance."
       description="Zeeq plugs into your existing workflows seamlessly and incrementally assembles a world model of your product and codebase by accumulating and assimilating knowledge, one PR at a time."
       :features="[
         {
@@ -107,7 +107,7 @@
           },
           {
             label: 'Get started',
-            to: 'https://github.com/zeeq-ai/zeeq-app',
+            to: 'https://app.zeeq.ai/docs/getting-started/introduction',
             target: '_blank',
             icon: 'i-hugeicons-book-open-01',
             size: 'xl',
