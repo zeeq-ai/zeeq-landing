@@ -2,6 +2,8 @@
 @import '@nuxt/ui';
 @import "tw-animate-css";
 
+@source "../../../content/**/*";
+
 @custom-variant dark (&:is(.dark *));
 
 @theme static {
@@ -152,4 +154,47 @@
   h6 {
     @apply font-heading;
   }
+}
+
+.docs-shell {
+  font-size: 0.875rem;
+}
+
+/* Keep docs prose denser than the landing page while preserving readable line length. */
+.docs-shell :where(p, li, td, th, blockquote) {
+  font-size: 0.875rem !important;
+  line-height: 1.55 !important;
+}
+
+/* Balance the left docs navigation against the denser body copy. */
+.docs-shell :where(aside a, aside button) {
+  font-size: 0.8125rem !important;
+  line-height: 1.4 !important;
+}
+
+/*
+  Scope compact link sizing to navigation only. Content headings also render as
+  hash links, so broad a[href^="#"] selectors shrink visible H2/H3 text.
+*/
+.docs-shell :where(aside a, nav [data-slot="title"]) {
+  font-size: 0.8125rem !important;
+  line-height: 1.4 !important;
+}
+
+/* Preserve a clear docs article hierarchy after making the body copy denser. */
+.docs-shell :where(h1) {
+  font-size: 1.75rem !important;
+  line-height: 1.18 !important;
+}
+
+/* H2 anchors inherit this size; keep it visibly larger than 14px body text. */
+.docs-shell :where(h2) {
+  font-size: 1.375rem !important;
+  line-height: 1.25 !important;
+}
+
+/* H3 sits between H2 and body text so nested sections remain scannable. */
+.docs-shell :where(h3) {
+  font-size: 1.125rem !important;
+  line-height: 1.3 !important;
 }

@@ -1,4 +1,13 @@
-<script setup>
+<script setup lang="ts">
+import type { ContentNavigationItem } from '@nuxt/content'
+
+const queryDocsNavigation = queryCollectionNavigation as (
+  collection: string,
+) => Promise<ContentNavigationItem[]>
+
+const stripDocsNavigationRoot = (items: ContentNavigationItem[]) =>
+  items.find(item => item.path === '/docs')?.children || items
+
 useHead({
   meta: [{ name: 'viewport', content: 'width=device-width, initial-scale=1' }],
   link: [
@@ -25,10 +34,13 @@ useHead({
 })
 
 const navLinks = [
-  { label: 'Features', to: '#features' },
-  { label: 'FAQ', to: '#faq' },
-  { label: 'Get started', to: '#cta' },
+  { label: 'Features', to: '/#features' },
+  { label: 'FAQ', to: '/#faq' },
+  { label: 'Get started', to: '/#cta' },
+  { label: 'Docs', to: '/docs/getting-started/introduction' },
 ]
+
+const route = useRoute()
 
 const title = 'zeeq.ai | Agent World Models'
 
@@ -42,6 +54,15 @@ useSeoMeta({
   ogDescription: description,
   twitterCard: 'summary_large_image',
 })
+
+const { data: navigation } = await useAsyncData<ContentNavigationItem[]>(
+  'navigation_docs',
+  () => queryDocsNavigation('docs'),
+  { transform: stripDocsNavigationRoot }
+)
+
+// Docus layout consumers inject this exact string key.
+provide('navigation', navigation)
 </script>
 
 <template>
@@ -82,6 +103,8 @@ useSeoMeta({
       </template>
 
       <template #right>
+        <UContentSearchButton />
+
         <UColorModeButton />
 
         <UButton
@@ -95,8 +118,10 @@ useSeoMeta({
       </template>
     </UHeader>
 
-    <UMain>
-      <NuxtPage />
+    <UMain :class="{ 'docs-shell': route.path.startsWith('/docs') }">
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
     </UMain>
 
     <USeparator />
@@ -119,5 +144,9 @@ useSeoMeta({
         />
       </template>
     </UFooter>
+
+    <ClientOnly>
+      <UContentSearch :navigation="navigation" />
+    </ClientOnly>
   </UApp>
 </template>

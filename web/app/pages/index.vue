@@ -22,8 +22,7 @@
           },
           {
             label: 'Get started',
-            to: 'https://app.zeeq.ai/docs/getting-started/introduction',
-            target: '_blank',
+            to: '/docs/getting-started/introduction',
             icon: 'i-hugeicons-book-open-01',
             size: 'xl',
             color: 'neutral',
@@ -42,8 +41,8 @@
 
     <UPageSection
       id="features"
-      title="Elevate AI coding performance."
-      description="Zeeq plugs into your existing workflows seamlessly and incrementally assembles a world model of your product and codebase by accumulating and assimilating knowledge, one PR at a time."
+      title="A cheat sheet for coding agents."
+      description="Zeeq plugs into your existing workflows seamlessly and incrementally assembles a world model which acts like a cheat sheet of your product and codebase by accumulating and assimilating knowledge, one PR at a time."
       :features="[
         {
           icon: 'i-hugeicons-artificial-intelligence-04',
@@ -107,8 +106,7 @@
           },
           {
             label: 'Get started',
-            to: 'https://app.zeeq.ai/docs/getting-started/introduction',
-            target: '_blank',
+            to: '/docs/getting-started/introduction',
             icon: 'i-hugeicons-book-open-01',
             size: 'xl',
             color: 'neutral',
