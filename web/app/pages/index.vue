@@ -3,26 +3,26 @@
     <div class="relative">
       <FlickeringGrid
         class="absolute inset-0 z-0 mask-[radial-gradient(ellipse_at_center,white_30%,transparent_70%)]"
-        color="#60A5FA"
+        color="#d3ec13"
         :square-size="6"
         :grid-gap="6"
         :max-opacity="0.35"
         :flicker-chance="0.1"
       />
       <UPageHero
-        title="The AI Knowledge Layer"
-        description="Low-friction, integrated, self-learning knowledge base and code reviews for agent-first teams."
+        title="World Models from Code"
+        description="Low-friction, integrated, self-assembling world models of your product for coding agents."
         :links="[
           {
             label: 'Log in',
-            to: 'https://ui.nuxt.com/docs/getting-started/installation/nuxt',
+            to: 'https://app.zeeq.ai/web',
             target: '_blank',
             trailingIcon: 'i-lucide-arrow-right',
             size: 'xl',
           },
           {
             label: 'Get started',
-            to: 'https://github.com/nuxt-ui-templates/starter',
+            to: 'https://github.com/zeeq-ai/zeeq-app',
             target: '_blank',
             icon: 'i-hugeicons-book-open-01',
             size: 'xl',
@@ -43,20 +43,8 @@
     <UPageSection
       id="features"
       title="Elevated AI coding performance for agentic engineering teams."
-      description="Build fast + ship confidently when AI agents follow your best practices for security, scalability, performance, testing, and coding style across any agent and any harness."
+      description="Zeeq plugs into your existing workflows seamlessly and incrementally assembles a world model of your product and codebase by accumulating and assimilating knowledge, one PR at a time."
       :features="[
-        {
-          icon: 'i-hugeicons-ai-book',
-          title: 'Indexed, searchable knowledge base',
-          description:
-            'Lets agents efficiently access shared, virtualized document libraries using fully indexed and optimized search retrieval.',
-        },
-        {
-          icon: 'i-hugeicons-target-02',
-          title: 'Targeted retrieval',
-          description:
-            'Efficient, targeted, semantic retrieval of only the relevant sections and code snippets that improve agent performance.',
-        },
         {
           icon: 'i-hugeicons-artificial-intelligence-04',
           title: 'Low-friction, faceted code reviews',
@@ -64,10 +52,22 @@
             'Mulit-faceted, agentic code reviews for the AI era that focus on actionable feedback reinforced by the accumulated knowledge base.',
         },
         {
-          icon: 'i-hugeicons-chart-02',
-          title: 'Full visibility into agent document interaction',
+          icon: 'i-icon-park-outline-nine-points-connected',
+          title: 'Indexed, searchable world model',
           description:
-            'See which documents ansd snippets are actually shaping agent output and your codebase to keep your team aligned with best practices.',
+            'Each code review incrementally builds the shared, semantic world model of your product and codebase by mapping features and lexicon to code.',
+        },
+        {
+          icon: 'i-hugeicons-target-02',
+          title: 'Targeted retrieval',
+          description:
+            'Efficient, targeted, semantic retrieval of only the relevant sections of knowledge and code snippets that improve agent adherence and performance.',
+        },
+        {
+          icon: 'i-hugeicons-chart-02',
+          title: 'Full visibility into world model interaction',
+          description:
+            'See which documents and snippets are actually shaping agent output and your codebase to keep your team aligned with best practices.',
         },
         {
           icon: 'i-hugeicons-ai-magic',
@@ -94,20 +94,20 @@
 
     <UPageSection id="cta">
       <UPageCTA
-        title="What if every agent could ship code like your best developers?"
-        description="Zeeq is the tool that lets agents write smarter code that understands your enterprise ecosystem and adheres to your standards and best practices so every member of your team can ship confidently with AI."
+        title="What if anyone could ship code like your most senior engineers?"
+        description="Zeeq is the tool that lets agents write smarter code that bridges a semantic understanding of your product with a technical understanding of your codebase and  your enterprise ecosystem so every member of your team can ship confidently with AI."
         variant="subtle"
         :links="[
           {
             label: 'Log in',
-            to: 'https://ui.nuxt.com/docs/getting-started/installation/nuxt',
+            to: 'https://app.zeeq.ai/web',
             target: '_blank',
             trailingIcon: 'i-lucide-arrow-right',
             size: 'xl',
           },
           {
             label: 'Get started',
-            to: 'https://github.com/nuxt-ui-templates/starter',
+            to: 'https://github.com/zeeq-ai/zeeq-app',
             target: '_blank',
             icon: 'i-hugeicons-book-open-01',
             size: 'xl',
@@ -200,9 +200,14 @@ const terminalLines = [
 
 const faqItems = [
   {
+    label: 'Why do I need a world model for my coding agent?',
+    content:
+      "AI coding agents reconstruct their internal world model of your product and system in each session with strong variance by model, by harness, and by a user's prompting style.  Zeeq works in the background by reviewing each PR as a committed unit of work and incrementally builds a shared world model by observing how the codebase changes over time.",
+  },
+  {
     label: 'How is this different from Claude/Codex/Cursor code reviews?',
     content:
-      'Zeeq keeps a history of your code reviews so you can choose to ship now, fix later.  Because it keeps a history of PRs and code reviews, you can also see agent performance over time and across developers.',
+      'Zeeq keeps a history of your code reviews so you can choose to ship now, fix later.  Because it keeps a history of PRs and code reviews, you can also see agent performance over time and across developers.  More importantly, Zeeq incrementally builds a shared world model over time as it processes each PR.',
   },
   {
     label: 'How are Zeeq code reviews better than GitHub code reviews?',
@@ -229,6 +234,11 @@ const faqItems = [
     label: 'Which tools and coding agents does Zeeq integrate with?',
     content:
       'Zeeq is an MCP server and easily plugs into all of the tools used by your team; it is designed to operate in a heterogeneous environment and works with Claude, Codex, ChatGPT, OpenCode, VS Code Copilot, Cursor, GitHub Copilot Agents, and any surface that supports MCP.',
+  },
+  {
+    label: 'What teams would benefit the most from Zeeq?',
+    content:
+      'Zeeq is a powerful tool for solo developers to enterprise teams, but it is especially powerful for agentic teams operating in heterogenous environments (different models, different harnesses, different levels of experience, and different roles (including non-technical)).',
   },
 ]
 </script>

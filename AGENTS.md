@@ -43,3 +43,4 @@ This application deploys as a static website to Firebase hosting.
 ## Interacting with UI
 
 - Use browser tool if provided or Playwright MCP tool
+- The application is running in a browser with HMR; avoid killing the process and restarting the server
