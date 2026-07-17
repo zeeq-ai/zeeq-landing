@@ -6,12 +6,12 @@
         color="#d3ec13"
         :square-size="6"
         :grid-gap="6"
-        :max-opacity="0.35"
+        :max-opacity="colorMode.value === 'dark' ? 0.35 : 0.85"
         :flicker-chance="0.1"
       />
       <UPageHero
         title="World Models from Code"
-        description="Low-friction, integrated, self-assembling world models of your product for coding agents."
+        description="An incremental, self-learning agent world model accumulated from each PR that powers agent-first teams."
         :links="[
           {
             label: 'Log in',
@@ -94,7 +94,7 @@
 
     <UPageSection id="cta">
       <UPageCTA
-        title="What if anyone could ship code like your most senior engineers?"
+        title="What if everyone on your team could ship code like your most senior engineers?"
         description="Zeeq is the tool that lets agents write smarter code that bridges a semantic understanding of your product with a technical understanding of your codebase and  your enterprise ecosystem so every member of your team can ship confidently with AI."
         variant="subtle"
         :links="[
@@ -122,6 +122,8 @@
 
 <script setup lang="ts">
 import FlickeringGrid from '~/components/ui/flickering-grid/FlickeringGrid.vue'
+
+const colorMode = useColorMode()
 
 const terminalLines = [
   {
@@ -202,7 +204,7 @@ const faqItems = [
   {
     label: 'Why do I need a world model for my coding agent?',
     content:
-      "AI coding agents reconstruct their internal world model of your product and system in each session with strong variance by model, by harness, and by a user's prompting style.  Zeeq works in the background by reviewing each PR as a committed unit of work and incrementally builds a shared world model by observing how the codebase changes over time.",
+      "AI coding agents reconstruct their internal world model of your product and system in each session with strong variance by model, by harness, and by a user's prompting style.  Zeeq works in the background by reviewing each PR as a committed unit of work and incrementally builds a shared world model by observing how the codebase changes over time.  It is especially powerful in teams because it baselines the accumulated agent understanding as committed and merged in PRs.",
   },
   {
     label: 'How is this different from Claude/Codex/Cursor code reviews?',
@@ -224,6 +226,11 @@ const faqItems = [
     label: 'How does Zeeq learn about my product?',
     content:
       'Zeeq goes deeper than just a knowledge base: it iteratively learns about your product by looking at the stream of PRs.  Each PR encapsulates a boundary of related code; Zeeq understands this and compiles its own semantic understanding of not just the code, but how the code maps to your product.  This helps guide agents in coding tasks, normalizes behavior, and encourages code reuse.',
+  },
+  {
+    label: 'Does Zeeq copy my entire codebase or use it for training?',
+    content:
+      'No; Zeeq only sees the code present in each PR and uses that to incrementally learn about your domain, product, and codebase.  PRs are never stored permanently and are deleted as soon as they are processed.',
   },
   {
     label: 'How does Zeeq help in enterprise environments?',

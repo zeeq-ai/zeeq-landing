@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { cn } from '~/lib/utils'
-import { computed, onBeforeUnmount, onMounted, ref, toRefs } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref, toRefs, watch } from 'vue'
 
 interface FlickeringGridProps {
   squareSize?: number
@@ -104,6 +104,14 @@ function drawGrid(
 
 const gridParams = ref<ReturnType<typeof setupCanvas>>()
 
+watch(maxOpacity, () => {
+  if (!gridParams.value) return
+  const { squares } = gridParams.value
+  for (let i = 0; i < squares.length; i++) {
+    squares[i] = Math.random() * maxOpacity.value
+  }
+})
+
 function updateCanvasSize() {
   const newWidth = width.value || containerRef.value!.clientWidth
   const newHeight = height.value || containerRef.value!.clientHeight
@@ -147,8 +155,8 @@ onMounted(() => {
     updateCanvasSize()
   })
   intersectionObserver = new IntersectionObserver(
-    ([entry]) => {
-      isInView.value = entry.isIntersecting
+    ([entry]: IntersectionObserverEntry[]) => {
+      isInView.value = entry?.isIntersecting ?? false
       animationFrameId = requestAnimationFrame(animate)
     },
     { threshold: 0 },

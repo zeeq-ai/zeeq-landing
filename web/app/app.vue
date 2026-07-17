@@ -30,9 +30,10 @@ const navLinks = [
   { label: 'Get started', to: '#cta' },
 ]
 
-const title = 'zeeq.ai | agent world models'
+const title = 'zeeq.ai | Agent World Models'
+
 const description =
-  'Low-friction, integrated, self-learning knowledge base and code reviews for agent-first teams.'
+  'An incremental, self-learning agent world model accumulated from each PR that powers agent-first teams.'
 
 useSeoMeta({
   title,
@@ -103,7 +104,7 @@ useSeoMeta({
     <UFooter>
       <template #left>
         <p class="text-sm text-muted">
-          zeeq.ai • © {{ new Date().getFullYear() }}
+          zeeq.ai © {{ new Date().getFullYear() }}
         </p>
       </template>
 
