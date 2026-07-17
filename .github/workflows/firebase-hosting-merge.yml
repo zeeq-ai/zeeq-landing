@@ -19,7 +19,7 @@ jobs:
           cache: true
 
       - run: |
-          pnpm --filter ./web install --lockfile-only --frozen-lockfile
+          pnpm --filter ./web install --frozen-lockfile
           pnpm --filter ./web build
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
