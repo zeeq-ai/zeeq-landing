@@ -34,6 +34,16 @@ const stabilizeLocalStudioDeps = (_options: unknown, nuxt: NuxtModuleContext) =>
 export default defineNuxtConfig({
   extends: ['docus'],
 
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          langs: ['csharp', 'sql', 'xml', 'toml'],
+        },
+      },
+    },
+  },
+
   modules: [
     '@nuxt/eslint',
     '@nuxt/ui',

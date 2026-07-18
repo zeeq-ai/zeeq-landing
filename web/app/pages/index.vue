@@ -36,51 +36,24 @@
             class="max-w-2xl mx-auto w-full"
           />
         </template>
+
+        <template #default>
+          <ZPageLogos class="mt-8" />
+
+          <AnimatedTestimonials
+            :testimonials="testimonials"
+            :autoplay="true"
+            :duration="12000"
+          />
+        </template>
       </UPageHero>
     </div>
 
     <UPageSection
       id="features"
       title="A cheat sheet for coding agents."
-      description="Zeeq plugs into your existing workflows seamlessly and incrementally assembles a world model which acts like a cheat sheet of your product and codebase by accumulating and assimilating knowledge, one PR at a time."
-      :features="[
-        {
-          icon: 'i-hugeicons-artificial-intelligence-04',
-          title: 'Low-friction, faceted code reviews',
-          description:
-            'Mulit-faceted, agentic code reviews for the AI era that focus on actionable feedback reinforced by the accumulated knowledge base.',
-        },
-        {
-          icon: 'i-icon-park-outline-nine-points-connected',
-          title: 'Indexed, searchable world model',
-          description:
-            'Each code review incrementally builds the shared, semantic world model of your product and codebase by mapping features and lexicon to code.',
-        },
-        {
-          icon: 'i-hugeicons-target-02',
-          title: 'Targeted retrieval',
-          description:
-            'Efficient, targeted, semantic retrieval of only the relevant sections of knowledge and code snippets that improve agent adherence and performance.',
-        },
-        {
-          icon: 'i-hugeicons-chart-02',
-          title: 'Full visibility into world model interaction',
-          description:
-            'See which documents and snippets are actually shaping agent output and your codebase to keep your team aligned with best practices.',
-        },
-        {
-          icon: 'i-hugeicons-ai-magic',
-          title: 'Iteratively self-learning',
-          description:
-            'Compiles a deep, semantic understanding of your product, your features, your code as it reviews code so agents actually know what to build',
-        },
-        {
-          icon: 'i-hugeicons-user-group-02',
-          title: 'Built for teams',
-          description:
-            'Designed to be low-friction and operate in agentic teams using heterogenous agent harnesses, AI-enabled runtimes, and LLMs',
-        },
-      ]"
+      description="Zeeq plugs into your existing workflows seamlessly and incrementally assembles a world model which acts like a cheat sheet of your product and codebase. It accumulates and assimilates knowledge, one PR at a time."
+      :features
     />
 
     <UPageSection
@@ -120,6 +93,7 @@
 
 <script setup lang="ts">
 import FlickeringGrid from '~/components/ui/flickering-grid/FlickeringGrid.vue'
+import AnimatedTestimonials from '~/components/ui/animated-testimonials/AnimatedTestimonials.vue'
 
 const colorMode = useColorMode()
 
@@ -195,6 +169,69 @@ const terminalLines = [
         style: 'url',
       },
     ],
+  },
+]
+
+const testimonials = [
+  {
+    quote:
+      "I'm a believer because I've experienced it.  This is a boiling point frog type situation - your code quality will slowly get worse over time and it'll be terrible without it.",
+    name: 'Chander Ramesh',
+    designation: 'CTO at Motion',
+    image: '/people/chander-ramesh.png',
+  },
+  {
+    quote:
+      'I do NOT have an engineering background so the curated agents are really doing some heavy lifting for me. The reviews have given me a lot more confidence in the code my agents are writing.',
+    name: 'Gary Chao',
+    designation: 'Head of Ops at Bullship',
+    image: '/people/gary-chao.png',
+  },
+  {
+    quote:
+      'Honestly I’ve never enjoyed shipping code more than I do right now with all our agentic coding tools.',
+    name: 'Tom Österlund',
+    designation: 'Senior Engineer at Wonderly',
+    image: '/people/tom-osterlund.png',
+  },
+]
+
+const features = [
+  {
+    icon: 'i-hugeicons-artificial-intelligence-04',
+    title: 'Low-friction, faceted code reviews',
+    description:
+      'Mulit-faceted, agentic code reviews for the AI era that focus on actionable feedback reinforced by the accumulated knowledge base.',
+  },
+  {
+    icon: 'i-icon-park-outline-nine-points-connected',
+    title: 'Indexed, searchable world model',
+    description:
+      'Each code review incrementally builds the shared, semantic world model of your product and codebase by mapping features and lexicon to code.',
+  },
+  {
+    icon: 'i-hugeicons-target-02',
+    title: 'Targeted retrieval',
+    description:
+      'Efficient, targeted, semantic retrieval of only the relevant sections of knowledge and code snippets that improve agent adherence and performance.',
+  },
+  {
+    icon: 'i-hugeicons-chart-02',
+    title: 'Full visibility into world model interaction',
+    description:
+      'See which documents and snippets are actually shaping agent output and your codebase to keep your team aligned with best practices.',
+  },
+  {
+    icon: 'i-hugeicons-ai-magic',
+    title: 'Iteratively self-learning',
+    description:
+      'Compiles a deep, semantic understanding of your product, your features, your code as it reviews code so agents actually know what to build',
+  },
+  {
+    icon: 'i-hugeicons-user-group-02',
+    title: 'Built for teams',
+    description:
+      'Designed to be low-friction and operate in agentic teams using heterogenous agent harnesses, AI-enabled runtimes, and LLMs',
   },
 ]
 
