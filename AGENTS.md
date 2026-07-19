@@ -44,3 +44,12 @@ This application deploys as a static website to Firebase hosting.
 
 - Use browser tool if provided or Playwright MCP tool
 - The application is running in a browser with HMR; avoid killing the process and restarting the server
+
+## Aspire Runtime
+
+- The application is running in an Aspire stack (`../zeeq-app/host/AppHost.cs`)
+- `aspire ps` to find the process and `aspire logs` to view/search logs
+- `aspire resource zeeq-docs restart` to restart
+- See additional `aspire` commands as needed
+- DO NOT restart the entire Aspire stack; other components are running there.  For this app, only restart `zeeq-docs`
+- Avoid creating separate background processes for this app

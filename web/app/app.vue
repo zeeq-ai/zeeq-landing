@@ -63,6 +63,12 @@ const { data: navigation } = await useAsyncData<ContentNavigationItem[]>(
 
 // Docus layout consumers inject this exact string key.
 provide('navigation', navigation)
+
+const { data: searchFiles } = useLazyAsyncData(
+  'search_docs',
+  () => queryCollectionSearchSections('docs'),
+  { server: false }
+)
 </script>
 
 <template>
@@ -146,7 +152,12 @@ provide('navigation', navigation)
     </UFooter>
 
     <ClientOnly>
-      <UContentSearch :navigation="navigation" />
+      <UContentSearch
+        :files="searchFiles"
+        :navigation="navigation"
+        title="Search documentation"
+        description="Search Zeeq's documentation"
+      />
     </ClientOnly>
   </UApp>
 </template>
