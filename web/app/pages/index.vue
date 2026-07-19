@@ -175,7 +175,7 @@ const terminalLines = [
 const testimonials = [
   {
     quote:
-      "I'm a believer because I've experienced it.  This is a boiling point frog type situation - your code quality will slowly get worse over time and it'll be terrible without it.",
+      "I'm a believer because I've experienced it.  This is a boiling frog type situation - your code quality will slowly get worse over time and it'll be terrible without it.",
     name: 'Chander Ramesh',
     designation: 'CTO at Motion',
     image: '/people/chander-ramesh.png',
@@ -193,6 +193,13 @@ const testimonials = [
     name: 'Tom Österlund',
     designation: 'Senior Engineer at Wonderly',
     image: '/people/tom-osterlund.png',
+  },
+  {
+    quote:
+      "Zeeq has had a large role in keeping agentic coding in Wonderly grounded in the same knowledge and genuinely kept the codebase workable across engineering teams, can't imagine working without it.",
+    name: 'Lefan Tan',
+    designation: 'Senior Engineer at Wonderly',
+    image: '/people/lefan-tan.png',
   },
 ]
 
