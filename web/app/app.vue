@@ -38,6 +38,7 @@ const navLinks = [
   { label: 'FAQ', to: '/#faq' },
   { label: 'Get started', to: '/#cta' },
   { label: 'Docs', to: '/docs/getting-started/introduction' },
+  { label: 'Login', to: 'https://app.zeeq.ai/web' },
 ]
 
 const route = useRoute()
@@ -112,6 +113,14 @@ const { data: searchFiles } = useLazyAsyncData(
         <UContentSearchButton />
 
         <UColorModeButton />
+
+        <UButton
+          to="https://app.zeeq.ai/web"
+          icon="i-lucide-log-in"
+          aria-label="Login"
+          color="neutral"
+          variant="ghost"
+        />
 
         <UButton
           to="https://github.com/zeeq-ai/zeeq-app"
