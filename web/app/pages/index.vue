@@ -3,7 +3,7 @@
     <div class="relative">
       <FlickeringGrid
         class="absolute inset-0 z-0 mask-[radial-gradient(ellipse_at_center,white_30%,transparent_70%)]"
-        color="#d3ec13"
+        color="#c4d814"
         :square-size="6"
         :grid-gap="6"
         :max-opacity="colorMode.value === 'dark' ? 0.35 : 0.85"
@@ -14,7 +14,7 @@
         description="An incremental, self-learning agent world model accumulated from each PR that powers agent-first teams."
         :links="[
           {
-            label: 'Log in',
+            label: 'Try for free',
             to: 'https://app.zeeq.ai/web',
             target: '_blank',
             trailingIcon: 'i-lucide-arrow-right',
@@ -71,7 +71,7 @@
         variant="subtle"
         :links="[
           {
-            label: 'Log in',
+            label: 'Try for free',
             to: 'https://app.zeeq.ai/web',
             target: '_blank',
             trailingIcon: 'i-lucide-arrow-right',
