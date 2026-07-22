@@ -218,16 +218,16 @@ const testimonials = [
 
 const features = [
   {
-    icon: 'i-hugeicons-artificial-intelligence-04',
-    title: 'Low-friction, mixture-of-experts code reviews',
-    description:
-      'Deploy curated teams of agents to review code and provide targeted, actionable feedback.  Customize and tune behavior easily with high visibility into impact and performance.',
-  },
-  {
     icon: 'i-icon-park-outline-nine-points-connected',
-    title: 'Indexed, searchable knowledge base',
+    title: 'Indexed, chunked, searchable knowledge base',
     description:
       'Use a shared knowledge base that grounds both code review and code generation, ensuring that agents are following best practices and enterprise standards.',
+  },
+  {
+    icon: 'i-hugeicons-artificial-intelligence-04',
+    title: '"Closed loop"", mixture-of-experts code reviews',
+    description:
+      'Use out-of-the-box and easy to tune agent code reviewers that are grounded in the same knowledge base and used consistently in your coding loop and in your PR.',
   },
   {
     icon: 'i-hugeicons-target-02',
@@ -237,9 +237,9 @@ const features = [
   },
   {
     icon: 'i-hugeicons-chart-02',
-    title: 'Full visibility into knowledge model interaction',
+    title: 'High visibility and observability of outcomes',
     description:
-      'See which documents and snippets are actually shaping agent output and your codebase to keep your team aligned with best practices.',
+      'See that text in your corpus is actually shaping agent output and your codebase to keep your team aligned with best practices.',
   },
   {
     icon: 'i-hugeicons-ai-magic',
