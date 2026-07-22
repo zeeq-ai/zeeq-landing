@@ -43,7 +43,7 @@
           <AnimatedTestimonials
             :testimonials="testimonials"
             :autoplay="true"
-            :duration="12000"
+            :duration="15000"
           />
         </template>
       </UPageHero>
@@ -52,7 +52,7 @@
     <UPageSection
       id="features"
       title="A low ceremony toolset for agentic teams."
-      description="Zeeq plugs into existing workflows seamlessly and thrives in heterogeneous environments with different models, harnesses, and agent surfaces to lift code quality, consistency, and observability."
+      description="Zeeq plugs into existing workflows and thrives in heterogeneous environments with different models, harnesses, and agent surfaces to lift code quality, consistency, and observability.  No change in workflow, no special harnesses; just low-friction, high impact results."
       :features
     />
 
@@ -192,6 +192,13 @@ const testimonials = [
     name: 'Gary Chao',
     designation: 'Head of Ops at Bullship',
     image: '/people/gary-chao.png',
+  },
+  {
+    quote:
+      'Agents are simple tools: text in, text out. Zeeq optimizes the "text in" and nets everyone on the team higher quality "text out" with guards that verify it and signals that proves it.',
+    name: 'Charles Chen',
+    designation: 'Founder at Zeeq (ex-Motion)',
+    image: '/people/charles-chen.jpg',
   },
   {
     quote:
