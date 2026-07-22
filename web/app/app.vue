@@ -6,7 +6,7 @@ const queryDocsNavigation = queryCollectionNavigation as (
 ) => Promise<ContentNavigationItem[]>
 
 const stripDocsNavigationRoot = (items: ContentNavigationItem[]) =>
-  items.find(item => item.path === '/docs')?.children || items
+  items.find((item) => item.path === '/docs')?.children || items
 
 useHead({
   meta: [{ name: 'viewport', content: 'width=device-width, initial-scale=1' }],
@@ -43,10 +43,10 @@ const navLinks = [
 
 const route = useRoute()
 
-const title = 'zeeq.ai | Agent World Models'
+const title = 'zeeq.ai | Less Tooling. More Building.'
 
 const description =
-  'An incremental, self-learning agent world model accumulated from each PR that powers agent-first teams.'
+  'Low friction, high impact, no bullsh*t, practical agent tooling for pragmatic engineering teams.'
 
 useSeoMeta({
   title,
@@ -59,7 +59,7 @@ useSeoMeta({
 const { data: navigation } = await useAsyncData<ContentNavigationItem[]>(
   'navigation_docs',
   () => queryDocsNavigation('docs'),
-  { transform: stripDocsNavigationRoot }
+  { transform: stripDocsNavigationRoot },
 )
 
 // Docus layout consumers inject this exact string key.
@@ -68,7 +68,7 @@ provide('navigation', navigation)
 const { data: searchFiles } = useLazyAsyncData(
   'search_docs',
   () => queryCollectionSearchSections('docs'),
-  { server: false }
+  { server: false },
 )
 </script>
 
