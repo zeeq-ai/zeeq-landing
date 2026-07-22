@@ -10,8 +10,8 @@
         :flicker-chance="0.1"
       />
       <UPageHero
-        title="World Models from Code"
-        description="An incremental, self-learning agent world model accumulated from each PR that powers agent-first teams."
+        title="Less Tooling. More Building."
+        description="Low friction, high impact, no bullsh*t, practical agent tooling for pragmatic engineering teams."
         :links="[
           {
             label: 'Try for free',
@@ -51,8 +51,8 @@
 
     <UPageSection
       id="features"
-      title="A cheat sheet for coding agents."
-      description="Zeeq plugs into your existing workflows seamlessly and incrementally assembles a world model which acts like a cheat sheet of your product and codebase. It accumulates and assimilates knowledge, one PR at a time."
+      title="A low ceremony toolset for agentic teams."
+      description="Zeeq plugs into existing workflows seamlessly and thrives in heterogeneous environments with different models, harnesses, and agent surfaces to lift code quality, consistency, and observability."
       :features
     />
 
@@ -163,6 +163,12 @@ const terminalLines = [
   },
   {
     segments: [
+      { text: '→ Session telemetry recorded!', style: 'dim' },
+      { text: ' ✓', style: 'success' },
+    ],
+  },
+  {
+    segments: [
       { text: 'Manage code review findings: ', style: 'success' },
       {
         text: 'https://app.zeeq.ai/web/code-reviews',
@@ -206,15 +212,15 @@ const testimonials = [
 const features = [
   {
     icon: 'i-hugeicons-artificial-intelligence-04',
-    title: 'Low-friction, faceted code reviews',
+    title: 'Low-friction, mixture-of-experts code reviews',
     description:
-      'Mulit-faceted, agentic code reviews for the AI era that focus on actionable feedback reinforced by the accumulated knowledge base.',
+      'Deploy curated teams of agents to review code and provide targeted, actionable feedback.  Customize and tune behavior easily with high visibility into impact and performance.',
   },
   {
     icon: 'i-icon-park-outline-nine-points-connected',
-    title: 'Indexed, searchable world model',
+    title: 'Indexed, searchable knowledge base',
     description:
-      'Each code review incrementally builds the shared, semantic world model of your product and codebase by mapping features and lexicon to code.',
+      'Use a shared knowledge base that grounds both code review and code generation, ensuring that agents are following best practices and enterprise standards.',
   },
   {
     icon: 'i-hugeicons-target-02',
@@ -224,7 +230,7 @@ const features = [
   },
   {
     icon: 'i-hugeicons-chart-02',
-    title: 'Full visibility into world model interaction',
+    title: 'Full visibility into knowledge model interaction',
     description:
       'See which documents and snippets are actually shaping agent output and your codebase to keep your team aligned with best practices.',
   },
@@ -238,7 +244,7 @@ const features = [
     icon: 'i-hugeicons-user-group-02',
     title: 'Built for teams',
     description:
-      'Designed to be low-friction and operate in agentic teams using heterogenous agent harnesses, AI-enabled runtimes, and LLMs',
+      'Designed to be low-ceremony, easy to adopt, and operate in agentic teams that are using heterogenous agent harnesses, AI-enabled runtimes, and LLMs',
   },
 ]
 
