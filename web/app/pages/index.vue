@@ -225,7 +225,7 @@ const features = [
   },
   {
     icon: 'i-hugeicons-artificial-intelligence-04',
-    title: '"Closed loop"", mixture-of-experts code reviews',
+    title: 'Mixture-of-experts code reviews',
     description:
       'Use out-of-the-box and easy to tune agent code reviewers that are grounded in the same knowledge base and used consistently in your coding loop and in your PR.',
   },
@@ -257,9 +257,10 @@ const features = [
 
 const faqItems = [
   {
-    label: 'Why do I need a world model for my coding agent?',
+    label:
+      "How can I trust that Zeeq isn't just another fad or hype of the week?",
     content:
-      "AI coding agents reconstruct their internal world model of your product and system in each session with strong variance by model, by harness, and by a user's prompting style.  Zeeq works in the background by reviewing each PR as a committed unit of work and incrementally builds a shared world model by observing how the codebase changes over time.  It is especially powerful in teams because it baselines the accumulated agent understanding as committed and merged in PRs.",
+      'Zeeq addresses three fundamental problems: better context in, checking agent output for adherence, and surfacing the telemetry to prove it.  Because it operates at such a fundamental level, it is perhaps more resistant to being a fad.',
   },
   {
     label: 'How is this different from Claude/Codex/Cursor code reviews?',
