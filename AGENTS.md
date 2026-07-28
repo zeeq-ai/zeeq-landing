@@ -1,11 +1,18 @@
-# Vue 3.5, Nuxt, and Nuxt UI Landing Site
+# Vue 3.5, Nuxt 4, and Nuxt UI Landing Site
 
 This is a modern, responsive landing page website that uses:
 
 - Vue 3.5
 - TypeScript
-- Nuxt
-- Nuxt UI (uses Tailwind CSS)
+- Nuxt 4 (targeting static site generation; no SSR)
+- Nuxt UI (component library; uses Tailwind CSS)
+
+## Endpoints
+
+- Production: <https://zeeq.ai> is the root URL
+- Local: <http://zeeq-docs.localhost:8095> is the local development URL
+
+Keep this in mind when setting up build variables, testing with `curl`, and using Playwright MCP.
 
 ## Nuxt UI MCP
 

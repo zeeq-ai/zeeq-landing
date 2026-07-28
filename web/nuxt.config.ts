@@ -34,16 +34,6 @@ const stabilizeLocalStudioDeps = (_options: unknown, nuxt: NuxtModuleContext) =>
 export default defineNuxtConfig({
   extends: ['docus'],
 
-  content: {
-    build: {
-      markdown: {
-        highlight: {
-          langs: ['csharp', 'sql', 'xml', 'toml'],
-        },
-      },
-    },
-  },
-
   modules: [
     '@nuxt/eslint',
     '@nuxt/ui',
@@ -57,6 +47,24 @@ export default defineNuxtConfig({
   },
 
   css: ['~/assets/css/main.css'],
+
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          langs: ['csharp', 'sql', 'xml', 'toml'],
+        },
+      },
+    },
+  },
+
+  runtimeConfig: {
+    public: {
+      site: {
+        url: 'https://zeeq.ai',
+      },
+    },
+  },
 
   routeRules: {
     '/': { prerender: true },
