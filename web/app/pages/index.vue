@@ -32,13 +32,6 @@
         :ui="{ container: 'pt-16 sm:pt-20 lg:pt-24' }"
       >
         <template #body>
-          <!--
-          <HeroTerminal
-            :lines="terminalLines"
-            class="max-w-2xl mx-auto w-full"
-          />
-          -->
-
           <HeroCarousel
             :items="carouselItems"
             class="mx-auto w-full max-w-6xl"
@@ -56,6 +49,26 @@
         </template>
       </UPageHero>
     </div>
+
+    <UPageSection
+      id="setup"
+      title="Configure in one line"
+      description="Get up and running in just a few minutes with a single line of configuration"
+      :links="[
+        {
+          label: 'Learn about configuration',
+          to: '/docs/getting-started/connecting-agents',
+          icon: 'i-hugeicons-book-open-01',
+          size: 'xl',
+          color: 'neutral',
+          variant: 'subtle',
+        },
+      ]"
+    >
+      <template #body>
+        <HeroTerminal :lines="terminalLines" class="max-w-2xl mx-auto w-full" />
+      </template>
+    </UPageSection>
 
     <UPageSection
       id="features"
@@ -192,23 +205,15 @@ const colorMode = useColorMode()
 
 const carouselItems = [
   {
-    title: 'Code reviews built for agents and humans',
+    title: 'Token and cost visibility per developer',
     narrative:
-      'Every pull request gets a grounded review with findings sorted by severity, anchored to the exact file and line, and paired with the fix. Add what matters to a findings cart and let your agent apply it...or let your agent run the review in-loop before the PR.',
-    description: 'Findings, not diffs — triaged by severity and ready to apply',
-    src: '/screens/carousel/code-review-inbox.webp',
-    alt: 'Zeeq code review inbox showing findings for a pull request',
+      'Track token usage and approximate spend by model, by user, and over time across every harness your team runs — Claude, Codex, Cursor, and anything else that speaks MCP.  Link your token spend to actual value creation by feature.',
+    description: 'What your agents cost, by model and by developer',
+    src: '/screens/carousel/session-token-telemetry.webp',
+    alt: 'Zeeq session telemetry showing token usage and cost by model and user',
   },
   {
-    title: 'Mixture-of-experts reviewers you control',
-    narrative:
-      'Ship with tuned reviewer personas for logic, structure, performance, testing, and technique — each with its own tunable prompt, activation filters, and model tier. Edit them, test them, and roll them out to every repo.',
-    description: 'Specialized reviewers, tuned to your standards',
-    src: '/screens/carousel/code-review-agents.webp',
-    alt: 'Zeeq reviewer agent configuration with prompt editor and model tier',
-  },
-  {
-    title: 'A knowledge base that proves its worth',
+    title: 'A knowledge layer that proves its worth',
     narrative:
       'Serve canonical guidance from virtualized libraries instead of scattered docs directories, then see exactly which documents, sections, and snippets your agents actually read.  Easily deploy docs enterprise wide without manual synchronization.',
     description: 'Know which docs are shaping your code',
@@ -224,36 +229,47 @@ const carouselItems = [
     alt: 'Zeeq overview dashboard with tool call, knowledge base, and review metrics',
   },
   {
+    title: 'Mixture-of-experts reviewers you control',
+    narrative:
+      'No mystery prompts that give low signals or over-corrects on code reviews.  Ship fast with tuned reviewer personas for logic, structure, performance, testing, and technique. Edit them, test them, and roll them out to every repo.',
+    description: 'Specialized reviewers, tuned to your standards',
+    src: '/screens/carousel/code-review-agents.webp',
+    alt: 'Zeeq reviewer agent configuration with prompt editor and model tier',
+  },
+  {
+    title: 'Code reviews built for agents...and humans',
+    narrative:
+      'Every pull request gets a grounded review with findings sorted by severity, paired with the fix, and cites your knowledge base docs. Add what matters to a findings cart and let your agent apply it...or let your agent run the review in-loop before the PR.',
+    description: 'Findings, not diffs, that cite your knowledge layer',
+    src: '/screens/carousel/code-review-inbox.webp',
+    alt: 'Zeeq code review inbox showing findings for a pull request',
+  },
+  {
     title: 'Findings telemetry across every repo',
     narrative:
-      'Break findings down by severity, repository, author, and origin to see where quality is slipping enterprise wide across all engineering teams and projects; see where code quality and agent output requires your attention.',
+      'Break findings down by severity, repository, author, and origin to see where quality is slipping enterprise wide across all engineering teams and projects; see where code quality and agent output requires attention to stay on track.',
     description: 'Severity and volume trends across your whole org',
     src: '/screens/carousel/code-review-findings-telemetry.webp',
     alt: 'Zeeq code review telemetry charting findings by severity, repository, and origin',
   },
-  {
-    title: 'Token and cost visibility per developer',
-    narrative:
-      'Track token usage and approximate spend by model, by user, and over time across every harness your team runs — Claude, Codex, Cursor, and anything else that speaks MCP.  Link your token spend to actual value creation by feature.',
-    description: 'What your agents cost, by model and by developer',
-    src: '/screens/carousel/session-token-telemetry.webp',
-    alt: 'Zeeq session telemetry showing token usage and cost by model and user',
-  },
 ]
 
-// Retained for reference; the hero now leads with HeroCarousel.
-const _terminalLines = [
+const terminalLines = [
   {
     segments: [
       { text: '$ ', style: 'prompt' },
       { text: 'claude', style: 'cmd' },
-      { text: ' "Let\'s build something amazing!"', style: 'flag' },
+      { text: ' mcp add --scope project --transport http', style: 'dim' },
+      {
+        text: ' zeeq https://app.zeeq.ai/mcp',
+        style: 'flag',
+      },
     ],
   },
   {
     segments: [
       {
-        text: '→ Using zeeq to find relevant canonical guidance...',
+        text: '→ Authenticating with zeeq...',
         style: 'dim',
       },
     ],
@@ -261,16 +277,14 @@ const _terminalLines = [
   {
     segments: [
       {
-        text: '→ Identified key guidance: ',
+        text: '→ Zeeq MCP ready! ',
         style: 'dim',
       },
-      { text: '2 documents', style: 'cmd' },
+      { text: '35 documents', style: 'cmd' },
       { text: ', ', style: 'dim' },
-      { text: '7 sections', style: 'cmd' },
+      { text: '5 review agents', style: 'cmd' },
       { text: ', ', style: 'dim' },
-      { text: '4 code snippets', style: 'cmd' },
-      { text: ', ', style: 'dim' },
-      { text: '15 memories', style: 'cmd' },
+      { text: '78 memory clusters ', style: 'cmd' },
     ],
   },
   {
