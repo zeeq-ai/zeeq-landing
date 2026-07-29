@@ -6,8 +6,8 @@
         color="#c4d814"
         :square-size="6"
         :grid-gap="6"
-        :max-opacity="colorMode.value === 'dark' ? 0.35 : 0.85"
-        :flicker-chance="0.1"
+        :max-opacity="colorMode.value === 'dark' ? 0.25 : 0.85"
+        :flicker-chance="0.05"
       />
       <UPageHero
         title="Less Tooling. More Building."
@@ -31,9 +31,16 @@
         ]"
       >
         <template #body>
+          <!--
           <HeroTerminal
             :lines="terminalLines"
             class="max-w-2xl mx-auto w-full"
+          />
+          -->
+
+          <HeroCarousel
+            :items="carouselItems"
+            class="mx-auto w-full max-w-6xl"
           />
         </template>
 
@@ -182,7 +189,59 @@ import AnimatedTestimonials from '~/components/ui/animated-testimonials/Animated
 
 const colorMode = useColorMode()
 
-const terminalLines = [
+const carouselItems = [
+  {
+    title: 'Code reviews built for agents and humans',
+    narrative:
+      'Every pull request gets a grounded review with findings sorted by severity, anchored to the exact file and line, and paired with the fix. Add what matters to a findings cart and let your agent apply it...or let your agent run the review in-loop before the PR.',
+    description: 'Findings, not diffs — triaged by severity and ready to apply',
+    src: '/screens/carousel/code-review-inbox.webp',
+    alt: 'Zeeq code review inbox showing findings for a pull request',
+  },
+  {
+    title: 'Mixture-of-experts reviewers you control',
+    narrative:
+      'Ship with tuned reviewer personas for logic, structure, performance, testing, and technique — each with its own tunable prompt, activation filters, and model tier. Edit them, test them, and roll them out to every repo.',
+    description: 'Specialized reviewers, tuned to your standards',
+    src: '/screens/carousel/code-review-agents.webp',
+    alt: 'Zeeq reviewer agent configuration with prompt editor and model tier',
+  },
+  {
+    title: 'A knowledge base that proves its worth',
+    narrative:
+      'Serve canonical guidance from virtualized libraries instead of scattered docs directories, then see exactly which documents, sections, and snippets your agents actually read.  Easily deploy docs enterprise wide without manual synchronization.',
+    description: 'Know which docs are shaping your code',
+    src: '/screens/carousel/library-level-telemetry.webp',
+    alt: 'Zeeq library metrics showing most-read documents, sections, and snippets',
+  },
+  {
+    title: 'Agent operations at a glance',
+    narrative:
+      'One dashboard for tool calls, knowledge base reads, review volume, and open critical findings — so you can tell whether your AI engineering practice is working today, not next quarter.',
+    description: 'Tool calls, knowledge reads, and reviews in one view',
+    src: '/screens/carousel/topline-telemetry.webp',
+    alt: 'Zeeq overview dashboard with tool call, knowledge base, and review metrics',
+  },
+  {
+    title: 'Findings telemetry across every repo',
+    narrative:
+      'Break findings down by severity, repository, author, and origin to see where quality is slipping enterprise wide across all engineering teams and projects; see where code quality and agent output requires your attention.',
+    description: 'Severity and volume trends across your whole org',
+    src: '/screens/carousel/code-review-findings-telemetry.webp',
+    alt: 'Zeeq code review telemetry charting findings by severity, repository, and origin',
+  },
+  {
+    title: 'Token and cost visibility per developer',
+    narrative:
+      'Track token usage and approximate spend by model, by user, and over time across every harness your team runs — Claude, Codex, Cursor, and anything else that speaks MCP.  Link your token spend to actual value creation by feature.',
+    description: 'What your agents cost, by model and by developer',
+    src: '/screens/carousel/session-token-telemetry.webp',
+    alt: 'Zeeq session telemetry showing token usage and cost by model and user',
+  },
+]
+
+// Retained for reference; the hero now leads with HeroCarousel.
+const _terminalLines = [
   {
     segments: [
       { text: '$ ', style: 'prompt' },
