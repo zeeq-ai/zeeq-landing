@@ -6,7 +6,7 @@
         color="#c4d814"
         :square-size="6"
         :grid-gap="6"
-        :max-opacity="colorMode.value === 'dark' ? 0.25 : 0.85"
+        :max-opacity="colorMode.value === 'dark' ? 0.25 : 0.5"
         :flicker-chance="0.05"
       />
       <UPageHero
@@ -29,6 +29,7 @@
             variant: 'subtle',
           },
         ]"
+        :ui="{ container: 'pt-16 sm:pt-20 lg:pt-24' }"
       >
         <template #body>
           <!--
