@@ -207,7 +207,7 @@ const carouselItems = [
   {
     title: 'Token and cost visibility per developer',
     narrative:
-      'Track token usage and approximate spend by model, by user, and over time across every harness your team runs — Claude, Codex, Cursor, and anything else that speaks MCP.  Link your token spend to actual value creation by feature.',
+      'Track token usage and approximate spend by model, by user, and over time across every harness your team runs — Claude, Codex, Cursor, and anything else that speaks MCP.  Link token spend to actual value creation by feature.',
     description: 'What your agents cost, by model and by developer',
     src: '/screens/carousel/session-token-telemetry.webp',
     alt: 'Zeeq session telemetry showing token usage and cost by model and user',
@@ -215,7 +215,7 @@ const carouselItems = [
   {
     title: 'A knowledge layer that proves its worth',
     narrative:
-      'Serve canonical guidance from virtualized libraries instead of scattered docs directories, then see exactly which documents, sections, and snippets your agents actually read.  Easily deploy docs enterprise wide without manual synchronization.',
+      'Serve canonical guidance from composable, virtualized libraries instead of scattered docs directories, then see exactly which documents, sections, and snippets agents actually read.  Instantly deploy docs enterprise wide without manual synchronization.',
     description: 'Know which docs are shaping your code',
     src: '/screens/carousel/library-level-telemetry.webp',
     alt: 'Zeeq library metrics showing most-read documents, sections, and snippets',
