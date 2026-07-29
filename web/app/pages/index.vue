@@ -11,7 +11,7 @@
       />
       <UPageHero
         title="Less Tooling. More Building."
-        description="Low friction, high impact, no bullsh*t, practical agent tooling for pragmatic engineering teams."
+        description="Practical agent ops and observability for pragmatic, enterprise AI engineering teams."
         :links="[
           {
             label: 'Try for free',
@@ -22,7 +22,7 @@
           },
           {
             label: 'Get started',
-            to: '/docs/getting-started/introduction',
+            to: '/docs/getting-started/key-features',
             icon: 'i-hugeicons-book-open-01',
             size: 'xl',
             color: 'neutral',
@@ -51,8 +51,8 @@
 
     <UPageSection
       id="features"
-      title="Low ceremony, high impact tools for agentic teams."
-      description="Zeeq plugs into existing workflows and thrives in heterogeneous environments with different models, harnesses, and agent surfaces to lift code quality, consistency, and observability.  No change in workflow, no special harnesses; just low-friction, high impact results."
+      title="Knowledge base + code reviews + memories + observability"
+      description='Zeeq helps enterprise teams move faster with AI agents while producing higher quality code by combining a canonical knowledge base,  mixture-of-experts code reviews, a "world model" memory system, and the telemetry to prove that it works.'
       :features
     />
 
@@ -164,7 +164,7 @@
           },
           {
             label: 'Get started',
-            to: '/docs/getting-started/introduction',
+            to: '/docs/getting-started/key-features',
             icon: 'i-hugeicons-book-open-01',
             size: 'xl',
             color: 'neutral',
@@ -352,7 +352,7 @@ const screenshotSectionLinks = [
   },
   {
     label: 'Read docs',
-    to: '/docs/getting-started/introduction',
+    to: '/docs/getting-started/key-features',
     trailingIcon: 'i-lucide-arrow-right',
     size: 'lg' as const,
   },

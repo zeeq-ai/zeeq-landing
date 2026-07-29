@@ -37,7 +37,7 @@ const navLinks = [
   { label: 'Features', to: '/#features' },
   { label: 'FAQ', to: '/#faq' },
   { label: 'Get started', to: '/#cta' },
-  { label: 'Docs', to: '/docs/getting-started/introduction' },
+  { label: 'Docs', to: '/docs/getting-started/key-features' },
   { label: 'Login', to: 'https://app.zeeq.ai/web' },
 ]
 
@@ -46,7 +46,7 @@ const route = useRoute()
 const title = 'zeeq.ai | Less Tooling. More Building.'
 
 const description =
-  'Low friction, high impact, no bullsh*t, practical agent tooling for pragmatic engineering teams.'
+  'Practical agent ops and observability for pragmatic, enterprise AI engineering teams.'
 
 useSeoMeta({
   title,

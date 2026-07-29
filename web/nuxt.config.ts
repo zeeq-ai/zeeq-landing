@@ -68,7 +68,7 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/': { prerender: true },
-    '/docs': { redirect: '/docs/getting-started/introduction', prerender: true },
+    '/docs': { redirect: '/docs/getting-started/key-features', prerender: true },
     '/docs/**': { prerender: true },
   },
 
