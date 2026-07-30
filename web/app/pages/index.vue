@@ -208,7 +208,8 @@ const carouselItems = [
     title: 'Token and cost visibility per developer',
     narrative:
       'Track token usage and approximate spend by model, by user, and over time across every harness your team runs — Claude, Codex, Cursor, and anything else that speaks MCP.  Link token spend to actual value creation by feature.',
-    description: 'What your agents cost, by model and by developer',
+    description:
+      'Where tokens are being spent, which features are being built, by whom',
     src: '/screens/carousel/session-token-telemetry.webp',
     alt: 'Zeeq session telemetry showing token usage and cost by model and user',
   },
@@ -216,7 +217,8 @@ const carouselItems = [
     title: 'A knowledge layer that proves its worth',
     narrative:
       'Serve canonical guidance from composable, virtualized libraries instead of scattered docs directories, then see exactly which documents, sections, and snippets agents actually read.  Instantly deploy docs enterprise wide without manual synchronization.',
-    description: 'Know which docs are shaping your code',
+    description:
+      'Insight and visibility into which inputs shape agent output and code quality',
     src: '/screens/carousel/library-level-telemetry.webp',
     alt: 'Zeeq library metrics showing most-read documents, sections, and snippets',
   },
@@ -224,7 +226,7 @@ const carouselItems = [
     title: 'Agent operations at a glance',
     narrative:
       'One dashboard for tool calls, knowledge base reads, review volume, and open critical findings — so you can tell whether your AI engineering practice is working today, not next quarter.',
-    description: 'Tool calls, knowledge reads, and reviews in one view',
+    description: 'Zeeq tool calls, knowledge reads, and reviews in one view',
     src: '/screens/carousel/topline-telemetry.webp',
     alt: 'Zeeq overview dashboard with tool call, knowledge base, and review metrics',
   },
@@ -232,7 +234,8 @@ const carouselItems = [
     title: 'Mixture-of-experts reviewers you control',
     narrative:
       'No mystery prompts that give low signals or over-corrects on code reviews.  Ship fast with tuned reviewer personas for logic, structure, performance, testing, and technique. Edit them, test them, and roll them out to every repo.',
-    description: 'Specialized reviewers, tuned to your standards',
+    description:
+      'Mixture-of-experts code review agents guided by the knowledge layer',
     src: '/screens/carousel/code-review-agents.webp',
     alt: 'Zeeq reviewer agent configuration with prompt editor and model tier',
   },
@@ -240,7 +243,8 @@ const carouselItems = [
     title: 'Code reviews built for agents...and humans',
     narrative:
       'Every pull request gets a grounded review with findings sorted by severity, paired with the fix, and cites your knowledge base docs. Add what matters to a findings cart and let your agent apply it...or let your agent run the review in-loop before the PR.',
-    description: 'Findings, not diffs, that cite your knowledge layer',
+    description:
+      'Findings, not diffs, grounded by and citing the knowledge layer',
     src: '/screens/carousel/code-review-inbox.webp',
     alt: 'Zeeq code review inbox showing findings for a pull request',
   },
