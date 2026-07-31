@@ -1,77 +1,3 @@
-<script setup lang="ts">
-import type { ContentNavigationItem } from '@nuxt/content'
-
-const queryDocsNavigation = queryCollectionNavigation as (
-  collection: string,
-) => Promise<ContentNavigationItem[]>
-
-const stripDocsNavigationRoot = (items: ContentNavigationItem[]) =>
-  items.find((item) => item.path === '/docs')?.children || items
-
-useHead({
-  meta: [{ name: 'viewport', content: 'width=device-width, initial-scale=1' }],
-  link: [
-    { rel: 'icon', href: '/favicon.ico', sizes: '32x32' },
-    { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
-    {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '16x16',
-      href: '/favicon-16x16.png',
-    },
-    {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '32x32',
-      href: '/favicon-32x32.png',
-    },
-    { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
-    { rel: 'manifest', href: '/site.webmanifest' },
-  ],
-  htmlAttrs: {
-    lang: 'en',
-  },
-})
-
-const navLinks = [
-  { label: 'Features', to: '/#features' },
-  { label: 'FAQ', to: '/#faq' },
-  { label: 'Get started', to: '/#cta' },
-  { label: 'Docs', to: '/docs/getting-started/key-features' },
-  { label: 'Login', to: 'https://app.zeeq.ai/web' },
-]
-
-const route = useRoute()
-
-const title = 'zeeq.ai | Less Tooling. More Building.'
-
-const description =
-  'Practical agent ops and observability for pragmatic, enterprise AI engineering teams.'
-
-useSeoMeta({
-  title,
-  description,
-  ogTitle: title,
-  ogDescription: description,
-  twitterCard: 'summary_large_image',
-})
-
-const { data: navigation } = await useAsyncData<ContentNavigationItem[]>(
-  'navigation_docs',
-  () => queryDocsNavigation('docs'),
-  { transform: stripDocsNavigationRoot },
-)
-
-// Docus layout consumers inject this exact string key.
-provide('navigation', navigation)
-
-const { data: searchFiles } = useLazyAsyncData(
-  'search_docs',
-  () => queryCollectionSearchSections('docs'),
-  { server: false },
-)
-</script>
-
 <template>
   <UApp>
     <UHeader>
@@ -170,3 +96,87 @@ const { data: searchFiles } = useLazyAsyncData(
     </ClientOnly>
   </UApp>
 </template>
+
+<script setup lang="ts">
+import type { ContentNavigationItem } from '@nuxt/content'
+
+const queryDocsNavigation = queryCollectionNavigation as (
+  collection: string,
+) => Promise<ContentNavigationItem[]>
+
+const stripDocsNavigationRoot = (items: ContentNavigationItem[]) =>
+  items.find((item) => item.path === '/docs')?.children || items
+
+useHead({
+  meta: [{ name: 'viewport', content: 'width=device-width, initial-scale=1' }],
+  link: [
+    { rel: 'icon', href: '/favicon.ico', sizes: '32x32' },
+    { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '16x16',
+      href: '/favicon-16x16.png',
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '32x32',
+      href: '/favicon-32x32.png',
+    },
+    { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
+    { rel: 'manifest', href: '/site.webmanifest' },
+  ],
+  htmlAttrs: {
+    lang: 'en',
+  },
+})
+
+const navLinks = [
+  { label: 'Features', to: '/#features' },
+  { label: 'FAQ', to: '/#faq' },
+  { label: 'Get started', to: '/#cta' },
+  { label: 'Docs', to: '/docs/getting-started/key-features' },
+  { label: 'Login', to: 'https://app.zeeq.ai/web' },
+]
+
+const route = useRoute()
+
+const title = 'zeeq.ai | Less Tooling. More Building.'
+
+const description =
+  'Practical agent ops and observability for pragmatic, enterprise AI engineering teams.'
+
+useSeoMeta({
+  title,
+  description,
+  ogTitle: title,
+  ogDescription: description,
+  twitterCard: 'summary_large_image',
+})
+
+const { data: navigation } = await useAsyncData<ContentNavigationItem[]>(
+  'navigation_docs',
+  async () => {
+    try {
+      return await queryDocsNavigation('docs')
+    } catch (error) {
+      console.error('Failed to load docs navigation', error)
+      return []
+    }
+  },
+  {
+    default: () => [],
+    transform: stripDocsNavigationRoot,
+  },
+)
+
+// Docus layout consumers inject this exact string key.
+provide('navigation', navigation)
+
+const { data: searchFiles } = useLazyAsyncData(
+  'search_docs',
+  () => queryCollectionSearchSections('docs'),
+  { server: false },
+)
+</script>

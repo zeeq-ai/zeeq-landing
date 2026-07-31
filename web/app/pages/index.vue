@@ -41,11 +41,39 @@
         <template #default>
           <ZPageLogos class="mt-8" />
 
-          <AnimatedTestimonials
-            :testimonials="testimonials"
-            :autoplay="true"
-            :duration="15000"
-          />
+          <ClientOnly>
+            <AnimatedTestimonials
+              :testimonials="testimonials"
+              :autoplay="true"
+              :duration="15000"
+            />
+            <template #fallback>
+              <div
+                class="mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12"
+              >
+                <div class="grid grid-cols-1 gap-20 md:grid-cols-2">
+                  <img
+                    :src="testimonials[0]!.image"
+                    :alt="testimonials[0]!.name"
+                    width="500"
+                    height="500"
+                    class="size-full rounded-3xl object-cover object-center"
+                  />
+                  <div class="flex flex-col justify-center py-4">
+                    <h3 class="text-2xl font-bold text-black dark:text-white">
+                      {{ testimonials[0]!.name }}
+                    </h3>
+                    <p class="text-sm text-gray-500 dark:text-neutral-500">
+                      {{ testimonials[0]!.designation }}
+                    </p>
+                    <p class="mt-8 text-lg text-gray-500 dark:text-neutral-300">
+                      {{ testimonials[0]!.quote }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </ClientOnly>
         </template>
       </UPageHero>
     </div>
@@ -56,7 +84,20 @@
       description="Zeeq is a shared, central knowledge and telemetry layer for every team in your organization.  Zeeq code reviews reference the same knowledge base powering agents and backstops quality regressions before they merge while building an emergent world model from every PR.  From vibe coding → agentic engineering."
     >
       <template #body>
-        <AgentFlowDiagram />
+        <ClientOnly>
+          <AgentFlowDiagram />
+          <template #fallback>
+            <div class="mx-auto grid max-w-5xl gap-4 sm:grid-cols-3">
+              <UPageCard
+                v-for="group in agentFlowFallbackGroups"
+                :key="group.title"
+                :title="group.title"
+                :description="group.description"
+                variant="subtle"
+              />
+            </div>
+          </template>
+        </ClientOnly>
       </template>
     </UPageSection>
 
@@ -213,6 +254,24 @@ import AnimatedTestimonials from '~/components/ui/animated-testimonials/Animated
 import AgentFlowDiagram from '~/components/ui/agent-flow/AgentFlowDiagram.vue'
 
 const colorMode = useColorMode()
+
+const agentFlowFallbackGroups = [
+  {
+    title: 'Agent harnesses',
+    description:
+      'Codex, Claude Code, Cursor, and OpenCode connect through the same enterprise layer.',
+  },
+  {
+    title: 'Zeeq platform',
+    description:
+      'Knowledge, reviews, telemetry, and skills stay consistent across every team.',
+  },
+  {
+    title: 'Engineering systems',
+    description:
+      'GitHub, documentation, traces, and metrics feed back into agent workflows.',
+  },
+]
 
 const carouselItems = [
   {
