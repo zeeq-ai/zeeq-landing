@@ -51,6 +51,16 @@
     </div>
 
     <UPageSection
+      id="ecosystem"
+      title="Every team, any agent, one enterprise layer"
+      description="Zeeq is a shared, central knowledge and telemetry layer for every team in your organization.  Zeeq code reviews reference the same knowledge base powering agents and backstops quality regressions before they merge while building an emergent world model from every PR.  From vibe coding → agentic engineering."
+    >
+      <template #body>
+        <AgentFlowDiagram />
+      </template>
+    </UPageSection>
+
+    <UPageSection
       id="setup"
       title="Configure in one line"
       description="Get up and running in just a few minutes with a single line of configuration"
@@ -200,6 +210,7 @@
 <script setup lang="ts">
 import FlickeringGrid from '~/components/ui/flickering-grid/FlickeringGrid.vue'
 import AnimatedTestimonials from '~/components/ui/animated-testimonials/AnimatedTestimonials.vue'
+import AgentFlowDiagram from '~/components/ui/agent-flow/AgentFlowDiagram.vue'
 
 const colorMode = useColorMode()
 
