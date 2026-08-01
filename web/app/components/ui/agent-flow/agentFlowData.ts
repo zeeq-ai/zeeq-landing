@@ -49,10 +49,10 @@ export const agentFlowNodes: Node[] = [
     data: {
       label: 'GitHub',
       handles: [
-        { id: 'b1', type: 'target', position: Position.Right, offset: ROW_OFFSETS[0] },
+        { id: 'b1', type: 'source', position: Position.Right, offset: ROW_OFFSETS[0] },
         { id: 'b3', type: 'source', position: Position.Right, offset: ROW_OFFSETS[1] },
         { id: 'b2', type: 'source', position: Position.Right, offset: ROW_OFFSETS[2] },
-        { id: 'b4', type: 'target', position: Position.Right, offset: ROW_OFFSETS[3] },
+        { id: 'b4', type: 'source', position: Position.Right, offset: ROW_OFFSETS[3] },
       ],
     } satisfies GroupNodeData,
   },
@@ -149,7 +149,7 @@ export const agentFlowNodes: Node[] = [
       label: 'Knowledge Layer',
       icon: 'i-ri-book-ai-line',
       handles: [
-        { id: 'left', type: 'source', position: Position.Left },
+        { id: 'left', type: 'target', position: Position.Left },
         { id: 'right', type: 'source', position: Position.Right },
         { id: 'bottom-source', type: 'source', position: Position.Bottom },
       ],
@@ -187,7 +187,7 @@ export const agentFlowNodes: Node[] = [
         { id: 'left', type: 'target', position: Position.Left },
         { id: 'right', type: 'target', position: Position.Right },
         { id: 'top-source', type: 'source', position: Position.Top },
-        { id: 'bottom-source', type: 'source', position: Position.Bottom },
+        { id: 'bottom-target', type: 'target', position: Position.Bottom },
       ],
     } satisfies PillNodeData,
   },
@@ -202,9 +202,9 @@ export const agentFlowNodes: Node[] = [
       label: 'World Model',
       icon: 'i-ri-planet-line',
       handles: [
-        { id: 'left', type: 'source', position: Position.Left },
+        { id: 'left', type: 'target', position: Position.Left },
         { id: 'right', type: 'source', position: Position.Right },
-        { id: 'top-target', type: 'target', position: Position.Top },
+        { id: 'top-source', type: 'source', position: Position.Top },
       ],
     } satisfies PillNodeData,
   },
@@ -224,7 +224,7 @@ const innerEdgeDefaults = {
 }
 
 export const agentFlowEdges: Edge[] = [
-  { id: 'b1-github', source: 'b1', sourceHandle: 'left', target: 'github', targetHandle: 'b1', ...outerEdgeDefaults },
+  { id: 'github-b1', source: 'github', sourceHandle: 'b1', target: 'b1', targetHandle: 'left', ...outerEdgeDefaults },
   { id: 'b1-agents', source: 'b1', sourceHandle: 'right', target: 'agents', targetHandle: 'b1', ...outerEdgeDefaults },
 
   { id: 'github-b3', source: 'github', sourceHandle: 'b3', target: 'b3', targetHandle: 'left', ...outerEdgeDefaults },
@@ -233,10 +233,10 @@ export const agentFlowEdges: Edge[] = [
   { id: 'github-b2', source: 'github', sourceHandle: 'b2', target: 'b2', targetHandle: 'left', ...outerEdgeDefaults },
   { id: 'agents-b2', source: 'agents', sourceHandle: 'b2', target: 'b2', targetHandle: 'right', ...outerEdgeDefaults },
 
-  { id: 'b4-github', source: 'b4', sourceHandle: 'left', target: 'github', targetHandle: 'b4', ...outerEdgeDefaults },
+  { id: 'github-b4', source: 'github', sourceHandle: 'b4', target: 'b4', targetHandle: 'left', ...outerEdgeDefaults },
   { id: 'b4-agents', source: 'b4', sourceHandle: 'right', target: 'agents', targetHandle: 'b4', ...outerEdgeDefaults },
 
   { id: 'b1-b3', source: 'b1', sourceHandle: 'bottom-source', target: 'b3', targetHandle: 'top-target', ...innerEdgeDefaults },
   { id: 'b2-b3', source: 'b2', sourceHandle: 'top-source', target: 'b3', targetHandle: 'bottom-target', ...innerEdgeDefaults },
-  { id: 'b2-b4', source: 'b2', sourceHandle: 'bottom-source', target: 'b4', targetHandle: 'top-target', ...innerEdgeDefaults },
+  { id: 'b4-b2', source: 'b4', sourceHandle: 'top-source', target: 'b2', targetHandle: 'bottom-target', ...innerEdgeDefaults },
 ]
