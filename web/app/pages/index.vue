@@ -491,7 +491,7 @@ const features = [
 const screenshotSectionLinks = [
   {
     label: 'GitHub',
-    to: 'https://github.com/zeeq-ai/zeeq-landing',
+    to: 'https://github.com/zeeq-ai/zeeq-app',
     target: '_blank',
     icon: 'i-lucide-github',
     color: 'neutral' as const,
