@@ -123,8 +123,8 @@
 
     <UPageSection
       id="features"
-      title="Knowledge base + code reviews + memories + observability"
-      description='Zeeq helps enterprise teams move faster with AI agents while producing higher quality code by combining a canonical knowledge base,  mixture-of-experts code reviews, a "world model" memory system, and the telemetry to prove that it works.'
+      title="Knowledge base + code reviews + world model + observability"
+      description='Zeeq helps enterprise teams move faster with AI agents while producing higher quality code by combining a canonical knowledge base,  mixture-of-experts code reviews, a "world model" memory system (2026 Q3), and the telemetry to prove that it works.'
       :features
     />
 
@@ -223,8 +223,8 @@
 
     <UPageSection id="cta">
       <UPageCTA
-        title="What if everyone on your team could ship code like your most senior engineers?"
-        description="Zeeq is the tool that lets agents write smarter code that bridges a semantic understanding of your product with a technical understanding of your codebase and  your enterprise ecosystem so every member of your team can ship confidently with AI."
+        title="Guide every agent, every team towards better output with the observability to prove it."
+        description="Zeeq is the tool that lets agents write smarter code that bridges a semantic understanding of your product with a technical understanding of your codebase and your enterprise ecosystem so every member of your team can ship confidently with AI, fully backed by the telemetry to prove it."
         variant="subtle"
         :links="[
           {
