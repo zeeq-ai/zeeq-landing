@@ -9,30 +9,22 @@
       </template>
 
       <template #default>
-        <nav class="hidden md:flex items-center gap-1">
-          <UButton
-            v-for="link in navLinks"
-            :key="link.label"
-            :to="link.to"
-            variant="ghost"
-            color="neutral"
-            :label="link.label"
-          />
-        </nav>
+        <UNavigationMenu
+          :items="headerNavItems"
+          color="neutral"
+          variant="link"
+          class="hidden md:flex"
+        />
       </template>
 
       <template #content>
-        <nav class="flex flex-col gap-1 p-4">
-          <UButton
-            v-for="link in navLinks"
-            :key="link.label"
-            :to="link.to"
-            variant="ghost"
-            color="neutral"
-            :label="link.label"
-            class="justify-start"
-          />
-        </nav>
+        <UNavigationMenu
+          :items="headerNavItems"
+          color="neutral"
+          variant="link"
+          orientation="vertical"
+          class="p-4"
+        />
       </template>
 
       <template #right>
@@ -110,6 +102,7 @@
 <script setup lang="ts">
 import type { ContentNavigationItem } from '@nuxt/content'
 import type { NavigationMenuItem } from '@nuxt/ui'
+import { solutionItems } from '~/utils/solutions'
 
 const queryDocsNavigation = queryCollectionNavigation as (
   collection: string,
@@ -146,10 +139,18 @@ useHead({
 /**
  * Nav items for the header
  */
-const navLinks = [
+const headerNavItems: NavigationMenuItem[] = [
   { label: 'Features', to: '/#features' },
   { label: 'FAQ', to: '/#faq' },
+  { label: 'Pricing', to: '/#pricing' },
   { label: 'Get started', to: '/#cta' },
+  {
+    label: 'Solutions',
+    children: solutionItems.map(({ title, ...solution }) => ({
+      ...solution,
+      label: title,
+    })),
+  },
   { label: 'Docs', to: '/docs/getting-started/key-features' },
   { label: 'Login', to: 'https://app.zeeq.ai/web' },
 ]
@@ -158,6 +159,10 @@ const navLinks = [
  * Nav items for the footer
  */
 const footerNavItems: NavigationMenuItem[] = [
+  {
+    label: 'Home',
+    href: 'https://zeeq.ai/',
+  },
   {
     label: 'Terms of Service',
     href: 'https://zeeq.ai/docs/policy/terms-of-service',

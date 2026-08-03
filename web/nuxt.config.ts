@@ -49,6 +49,9 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
 
   content: {
+    watch: {
+      enabled: true
+    },
     build: {
       markdown: {
         highlight: {
@@ -70,6 +73,18 @@ export default defineNuxtConfig({
     '/': { prerender: true },
     '/docs': { redirect: '/docs/getting-started/key-features', prerender: true },
     '/docs/**': { prerender: true },
+    '/solutions/**': { prerender: true },
+  },
+
+  nitro: {
+    prerender: {
+      routes: [
+        '/solutions/startups',
+        '/solutions/private-equity',
+        '/solutions/ai-consultancies',
+        '/solutions/enterprises',
+      ],
+    },
   },
 
   compatibilityDate: '2026-06-30',
