@@ -78,10 +78,13 @@
               }"
             >
               <div class="flex items-center gap-3">
-                <UAvatar
+                <img
                   :src="activeCaseStudy.person.avatar"
                   :alt="activeCaseStudy.person.name"
-                  size="lg"
+                  width="36"
+                  height="36"
+                  loading="lazy"
+                  class="size-9 shrink-0 rounded-full object-cover"
                 />
 
                 <div class="min-w-0">
