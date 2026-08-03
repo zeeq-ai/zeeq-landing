@@ -70,11 +70,21 @@
     <UFooter>
       <template #left>
         <p class="text-sm text-muted">
-          zeeq.ai © {{ new Date().getFullYear() }}
+          Zeeq Labs, Inc. © {{ new Date().getFullYear() }}
         </p>
       </template>
 
+      <UNavigationMenu :items="footerNavItems" variant="link" />
+
       <template #right>
+        <UButton
+          to="mailto:hello@zeeq.ai"
+          target="_blank"
+          icon="i-lucide-mail"
+          aria-label="Email"
+          color="neutral"
+          variant="ghost"
+        />
         <UButton
           to="https://github.com/zeeq-ai/zeeq-app"
           target="_blank"
@@ -99,6 +109,7 @@
 
 <script setup lang="ts">
 import type { ContentNavigationItem } from '@nuxt/content'
+import type { NavigationMenuItem } from '@nuxt/ui'
 
 const queryDocsNavigation = queryCollectionNavigation as (
   collection: string,
@@ -132,12 +143,31 @@ useHead({
   },
 })
 
+/**
+ * Nav items for the header
+ */
 const navLinks = [
   { label: 'Features', to: '/#features' },
   { label: 'FAQ', to: '/#faq' },
   { label: 'Get started', to: '/#cta' },
   { label: 'Docs', to: '/docs/getting-started/key-features' },
   { label: 'Login', to: 'https://app.zeeq.ai/web' },
+]
+
+/**
+ * Nav items for the footer
+ */
+const footerNavItems: NavigationMenuItem[] = [
+  {
+    label: 'Terms of Service',
+    href: 'https://zeeq.ai/docs/policy/terms-of-service',
+    target: '_blank',
+  },
+  {
+    label: 'Privacy Policy',
+    href: 'https://zeeq.ai/docs/policy/privacy-policy',
+    target: '_blank',
+  },
 ]
 
 const route = useRoute()

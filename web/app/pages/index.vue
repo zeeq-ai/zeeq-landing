@@ -14,19 +14,19 @@
         description="Practical agent ops and observability for pragmatic, enterprise AI engineering teams."
         :links="[
           {
-            label: 'Try for free',
-            to: 'https://app.zeeq.ai/web',
-            target: '_blank',
-            trailingIcon: 'i-lucide-arrow-right',
-            size: 'xl',
-          },
-          {
-            label: 'Get started',
+            label: 'Explore the docs',
             to: '/docs/getting-started/key-features',
             icon: 'i-hugeicons-book-open-01',
             size: 'xl',
             color: 'neutral',
             variant: 'subtle',
+          },
+          {
+            label: 'Request pilot',
+            to: 'https://app.zeeq.ai/web',
+            target: '_blank',
+            trailingIcon: 'i-lucide-arrow-right',
+            size: 'xl',
           },
         ]"
         :ui="{ container: 'pt-16 sm:pt-20 lg:pt-24' }"
@@ -228,19 +228,19 @@
         variant="subtle"
         :links="[
           {
-            label: 'Try for free',
-            to: 'https://app.zeeq.ai/web',
-            target: '_blank',
-            trailingIcon: 'i-lucide-arrow-right',
-            size: 'xl',
-          },
-          {
-            label: 'Get started',
+            label: 'Explore the docs',
             to: '/docs/getting-started/key-features',
             icon: 'i-hugeicons-book-open-01',
             size: 'xl',
             color: 'neutral',
             variant: 'subtle',
+          },
+          {
+            label: 'Request pilot',
+            to: 'https://app.zeeq.ai/web',
+            target: '_blank',
+            trailingIcon: 'i-lucide-arrow-right',
+            size: 'xl',
           },
         ]"
       />
@@ -499,7 +499,7 @@ const screenshotSectionLinks = [
     size: 'lg' as const,
   },
   {
-    label: 'Read docs',
+    label: 'Explore the docs',
     to: '/docs/getting-started/key-features',
     trailingIcon: 'i-lucide-arrow-right',
     size: 'lg' as const,
