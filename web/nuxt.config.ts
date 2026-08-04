@@ -76,6 +76,8 @@ export default defineNuxtConfig({
     '/solutions/**': { prerender: true },
   },
 
+  compatibilityDate: '2026-06-30',
+
   nitro: {
     prerender: {
       routes: [
@@ -86,8 +88,6 @@ export default defineNuxtConfig({
       ],
     },
   },
-
-  compatibilityDate: '2026-06-30',
 
   vite: {
     server: {
@@ -109,6 +109,7 @@ export default defineNuxtConfig({
 
   googleFonts: {
     families: {
+      'Alexandria': true,
       'Fugaz One': true,
       Poppins: [300, 400, 500, 600, 700],
     },

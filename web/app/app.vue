@@ -180,7 +180,7 @@ const route = useRoute()
 const title = 'zeeq.ai | Less Tooling. More Building.'
 
 const description =
-  'Practical agent ops and observability for pragmatic, enterprise AI engineering teams.'
+  'Enterprise agent visibility and oversight in one platform for every team, every agent, every surface.'
 
 useSeoMeta({
   title,

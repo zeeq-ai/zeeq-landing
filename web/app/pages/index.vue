@@ -11,7 +11,7 @@
       />
       <UPageHero
         title="Less Tooling. More Building."
-        description="Practical agent ops and observability for pragmatic, enterprise AI engineering teams."
+        description="Enterprise agent visibility and oversight in one platform for every team, every agent, every surface."
         :links="[
           {
             label: 'Explore the docs',
@@ -400,5 +400,4 @@ const features = [
       'Designed to be low-ceremony, easy to adopt, and operate in agentic teams that are using heterogenous agent harnesses, AI-enabled runtimes, and LLMs',
   },
 ]
-
 </script>
