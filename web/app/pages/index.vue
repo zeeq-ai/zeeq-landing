@@ -10,8 +10,8 @@
         :flicker-chance="0.05"
       />
       <UPageHero
-        title="Less Tooling. More Building."
-        description="Enterprise agent visibility and oversight in one platform for every team, every agent, every surface."
+        title="Oversight for Every Agent."
+        description="The observability layer engineering leaders use to see exactly how agents are used across every team, every tool, and every repo — activation, reads, cost, and outcomes, all in one place."
         :links="[
           {
             label: 'Explore the docs',
@@ -80,8 +80,8 @@
 
     <UPageSection
       id="ecosystem"
-      title="Every team, any agent, one enterprise layer"
-      description="Zeeq is a shared, central knowledge and telemetry layer for every team in your organization.  Zeeq code reviews reference the same knowledge base powering agents and backstops quality regressions before they merge while building an emergent world model from every PR.  From vibe coding → agentic engineering."
+      title="One Pane of Glass, Every Agent"
+      description="Whatever your teams run — Claude Code, Cursor, Codex, Copilot — Zeeq sits underneath and reports what's actually happening: which tools fire, which docs get read, which findings get fixed. No shadow AI, no blind spots."
     >
       <template #body>
         <ClientOnly>
@@ -104,7 +104,7 @@
     <UPageSection
       id="setup"
       title="Configure in one line"
-      description="Get up and running in just a few minutes with a single line of configuration"
+      description="One line of MCP config and telemetry starts flowing immediately. No rollout project, no per-team integration work."
       :links="[
         {
           label: 'Learn about configuration',
@@ -123,8 +123,8 @@
 
     <UPageSection
       id="features"
-      title="Knowledge base + code reviews + world model + observability"
-      description='Zeeq helps enterprise teams move faster with AI agents while producing higher quality code by combining a canonical knowledge base,  mixture-of-experts code reviews, a "world model" memory system (2026 Q3), and the telemetry to prove that it works.'
+      title="Proof Over Promises."
+      description="Zeeq turns agentic engineering from a black box into numbers leadership can act on: who's using what, what it costs, where quality is trending, and whether your standards are actually being followed — across every team, every tool."
       :features
     />
 
@@ -136,8 +136,8 @@
 
     <UPageSection id="cta">
       <UPageCTA
-        title="Guide every agent, every team towards better output with the observability to prove it."
-        description="Zeeq is the tool that lets agents write smarter code that bridges a semantic understanding of your product with a technical understanding of your codebase and your enterprise ecosystem so every member of your team can ship confidently with AI, fully backed by the telemetry to prove it."
+        title="Stop Flying Blind on AI."
+        description="Zeeq gives engineering leaders telemetry on agent activity, spend, and code quality across every team — so you can govern AI adoption with evidence, not anecdotes."
         variant="subtle"
         :links="[
           {
@@ -364,40 +364,40 @@ const testimonials = [
 
 const features = [
   {
-    icon: 'i-icon-park-outline-nine-points-connected',
-    title: 'Indexed, chunked, searchable knowledge base',
-    description:
-      'Use a shared knowledge base that grounds both code review and code generation, ensuring that agents are following best practices and enterprise standards.',
-  },
-  {
-    icon: 'i-hugeicons-artificial-intelligence-04',
-    title: 'Mixture-of-experts code reviews',
-    description:
-      'Use out-of-the-box and easy to tune agent code reviewers that are grounded in the same knowledge base and used consistently in your coding loop and in your PR.',
-  },
-  {
-    icon: 'i-hugeicons-target-02',
-    title: 'Targeted retrieval',
-    description:
-      'Efficient, targeted, semantic retrieval of only the relevant sections of knowledge and code snippets that improve agent adherence and performance.',
-  },
-  {
     icon: 'i-hugeicons-chart-02',
-    title: 'High visibility and observability of outcomes',
+    title: 'Visibility across every agent',
     description:
-      'See that text in your corpus is actually shaping agent output and your codebase to keep your team aligned with best practices.',
+      'Tool activation, document reads, and section-level usage, broken down by user, by agent, and by repo, across every harness your teams run.',
+  },
+  {
+    icon: 'i-hugeicons-analytics-01',
+    title: 'Cost you can trace to value',
+    description:
+      'Token spend by model, by team, and by feature, so leadership can tie AI investment to delivered work instead of a monthly bill.',
+  },
+  {
+    icon: 'i-hugeicons-shield-01',
+    title: 'Quality and risk trends, over time',
+    description:
+      'Review findings tracked by severity, repository, and team, so you see where quality is slipping before it compounds — not after it ships.',
+  },
+  {
+    icon: 'i-icon-park-outline-nine-points-connected',
+    title: 'Standards enforcement you can verify',
+    description:
+      'Publish best practices once and see, with evidence, whether they are actually being read and followed across every repo — not just deployed and hoped for.',
   },
   {
     icon: 'i-hugeicons-ai-magic',
-    title: 'Iteratively self-learning',
+    title: 'Evidence-based tuning',
     description:
-      'Compiles a deep, semantic understanding of your product, your features, your code as it reviews code so agents actually know what to build',
+      'Telemetry shows what is working, so you adjust knowledge, guardrails, and agent behavior with data instead of guesswork.',
   },
   {
     icon: 'i-hugeicons-user-group-02',
-    title: 'Built for teams',
+    title: 'Fits the stack you already have',
     description:
-      'Designed to be low-ceremony, easy to adopt, and operate in agentic teams that are using heterogenous agent harnesses, AI-enabled runtimes, and LLMs',
+      'Low-ceremony rollout across Claude Code, Cursor, Codex, Copilot, and whatever else your teams run - one harness or ten; it just works.',
   },
 ]
 </script>

@@ -177,10 +177,10 @@ const footerNavItems: NavigationMenuItem[] = [
 
 const route = useRoute()
 
-const title = 'zeeq.ai | Less Tooling. More Building.'
+const title = 'zeeq.ai | Oversight for Every Agent.'
 
 const description =
-  'Enterprise agent visibility and oversight in one platform for every team, every agent, every surface.'
+  'The observability layer engineering leaders use to see exactly how agents are used across every team, every tool, and every repo — activation, reads, cost, and outcomes, all in one place.'
 
 useSeoMeta({
   title,
