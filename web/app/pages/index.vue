@@ -6,7 +6,7 @@
         color="#c4d814"
         :square-size="6"
         :grid-gap="6"
-        :max-opacity="colorMode.value === 'dark' ? 0.25 : 0.5"
+        :max-opacity="colorMode.value === 'dark' ? 0.25 : 0.2"
         :flicker-chance="0.05"
       />
       <UPageHero

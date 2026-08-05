@@ -11,15 +11,9 @@
 <script setup lang="ts">
 const faqItems = [
   {
-    label:
-      "How can I trust that Zeeq isn't just another fad or hype of the week?",
-    content:
-      'Zeeq addresses three fundamental problems: better context in, checking agent output for adherence, and surfacing the telemetry to prove it.  Because it operates at such a fundamental level, it is perhaps more resistant to being a fad.',
-  },
-  {
     label: 'How is this different from Claude/Codex/Cursor code reviews?',
     content:
-      'Zeeq keeps a history of your code reviews so you can choose to ship now, fix later.  Because it keeps a history of PRs and code reviews, you can also see agent performance over time and across developers.  More importantly, Zeeq incrementally builds a shared world model over time as it processes each PR.',
+      'Zeeq code reviews are connected to your organizational document library and enforces documented rules.  It emits telemetry on the sources that it used to make its decisions.  The code review agents that run in the PR are used locally by all agents and all harnesses, providing consistent feedback across all developers, all harnesses, and all models.',
   },
   {
     label: 'How are Zeeq code reviews better than GitHub code reviews?',
@@ -48,14 +42,14 @@ const faqItems = [
       'Zeeq virtualizes document libraries and makes it easy to manage enterprise-wide knowledge delivered up-to-date, instantly, and without the need for developers to synchronize docs.  It is ideal for micro-services and many-services environments because the virtualized document libraries let one service understand another.',
   },
   {
-    label: 'Which tools and coding agents does Zeeq integrate with?',
+    label: 'Which harnesses and coding agents does Zeeq integrate with?',
     content:
       'Zeeq is an MCP server and easily plugs into all of the tools used by your team; it is designed to operate in a heterogeneous environment and works with Claude, Codex, ChatGPT, OpenCode, VS Code Copilot, Cursor, GitHub Copilot Agents, and any surface that supports MCP.',
   },
   {
     label: 'What teams would benefit the most from Zeeq?',
     content:
-      'Zeeq is a powerful tool for solo developers to enterprise teams, but it is especially powerful for agentic teams operating in heterogenous environments (different models, different harnesses, different levels of experience, and different roles (including non-technical)).',
+      'Zeeq is a powerful tool for solo developers to enterprise teams, but it is especially powerful for agentic teams operating in heterogeneous environments (different models, different harnesses, different levels of experience, and different roles (including non-technical)).',
   },
 ]
 </script>

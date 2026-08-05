@@ -94,7 +94,7 @@ const pricingSections: PricingTableSection[] = [
       {
         title: 'Best for',
         tiers: {
-          local: 'Evaluation',
+          local: 'Evaluation, Personal',
           'enterprise-self-host': 'Private infrastructure',
           'enterprise-cloud': 'Managed rollout',
         },

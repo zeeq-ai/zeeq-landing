@@ -1,5 +1,5 @@
 <template>
-  <div ref="containerRef" class="agent-flow-diagram h-[720px] w-full sm:h-[620px]">
+  <div ref="containerRef" class="agent-flow-diagram aspect-[19/10] max-h-[620px] min-h-[260px] w-full">
     <VueFlow
       :nodes="agentFlowNodes"
       :edges="agentFlowEdges"
