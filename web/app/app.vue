@@ -177,17 +177,32 @@ const footerNavItems: NavigationMenuItem[] = [
 
 const route = useRoute()
 
+const siteUrl = useRuntimeConfig().public.site.url
+
 const title = 'zeeq.ai | Oversight for Every Agent.'
 
 const description =
   'The observability layer engineering leaders use to see exactly how agents are used across every team, every tool, and every repo — activation, reads, cost, and outcomes, all in one place.'
+
+const ogImage = `${siteUrl}/zeeq-og.png`
 
 useSeoMeta({
   title,
   description,
   ogTitle: title,
   ogDescription: description,
+  ogType: 'website',
+  ogUrl: siteUrl,
+  ogSiteName: 'Zeeq',
+  ogLocale: 'en_US',
+  ogImage,
+  ogImageWidth: 1200,
+  ogImageHeight: 630,
+  ogImageAlt: 'Zeeq — oversight for every agent',
   twitterCard: 'summary_large_image',
+  twitterTitle: title,
+  twitterDescription: description,
+  twitterImage: ogImage,
 })
 
 const { data: navigation } = await useAsyncData<ContentNavigationItem[]>(
