@@ -25,7 +25,7 @@ export interface PillNodeData {
   handles: HandleSpec[]
 }
 
-const GITHUB_SIZE = { width: 220, height: 220 }
+const SOURCES_SIZE = { width: 240, height: 220 }
 const AGENTS_SIZE = { width: 240, height: 220 }
 const ZEEQ_SIZE = { width: 400, height: 600 }
 
@@ -38,16 +38,16 @@ const ROW_OFFSETS = ['20%', '40%', '60%', '80%']
 const ZEEQ_POSITION = { x: 360, y: 260 }
 // Center the side boxes on the zeeq box vertically instead of pinning them
 // to the top of the canvas.
-const SIDE_BOX_Y = ZEEQ_POSITION.y + ZEEQ_SIZE.height / 2 - GITHUB_SIZE.height / 2
+const SIDE_BOX_Y = ZEEQ_POSITION.y + ZEEQ_SIZE.height / 2 - SOURCES_SIZE.height / 2
 
 export const agentFlowNodes: Node[] = [
   {
-    id: 'github',
+    id: 'sources',
     type: 'group',
     position: { x: 0, y: SIDE_BOX_Y },
-    ...GITHUB_SIZE,
+    ...SOURCES_SIZE,
     data: {
-      label: 'GitHub',
+      label: 'Sources',
       handles: [
         { id: 'b1', type: 'source', position: Position.Right, offset: ROW_OFFSETS[0] },
         { id: 'b3', type: 'source', position: Position.Right, offset: ROW_OFFSETS[1] },
@@ -59,12 +59,22 @@ export const agentFlowNodes: Node[] = [
   {
     id: 'gh-icon',
     type: 'icon',
-    parentNode: 'github',
+    parentNode: 'sources',
     extent: 'parent',
-    position: { x: 50, y: 50 },
-    width: 120,
-    height: 120,
+    position: { x: 32, y: 70 },
+    width: 80,
+    height: 80,
     data: { icon: 'i-ri-github-fill', alt: 'GitHub' } satisfies IconNodeData,
+  },
+  {
+    id: 'notion-icon',
+    type: 'icon',
+    parentNode: 'sources',
+    extent: 'parent',
+    position: { x: 128, y: 70 },
+    width: 80,
+    height: 80,
+    data: { icon: 'i-ri-notion-line', alt: 'Notion' } satisfies IconNodeData,
   },
   {
     id: 'agents',
@@ -224,16 +234,16 @@ const innerEdgeDefaults = {
 }
 
 export const agentFlowEdges: Edge[] = [
-  { id: 'github-b1', source: 'github', sourceHandle: 'b1', target: 'b1', targetHandle: 'left', ...outerEdgeDefaults },
+  { id: 'sources-b1', source: 'sources', sourceHandle: 'b1', target: 'b1', targetHandle: 'left', ...outerEdgeDefaults },
   { id: 'b1-agents', source: 'b1', sourceHandle: 'right', target: 'agents', targetHandle: 'b1', ...outerEdgeDefaults },
 
-  { id: 'github-b3', source: 'github', sourceHandle: 'b3', target: 'b3', targetHandle: 'left', ...outerEdgeDefaults },
+  { id: 'sources-b3', source: 'sources', sourceHandle: 'b3', target: 'b3', targetHandle: 'left', ...outerEdgeDefaults },
   { id: 'agents-b3', source: 'agents', sourceHandle: 'b3', target: 'b3', targetHandle: 'right', ...outerEdgeDefaults },
 
-  { id: 'github-b2', source: 'github', sourceHandle: 'b2', target: 'b2', targetHandle: 'left', ...outerEdgeDefaults },
+  { id: 'sources-b2', source: 'sources', sourceHandle: 'b2', target: 'b2', targetHandle: 'left', ...outerEdgeDefaults },
   { id: 'agents-b2', source: 'agents', sourceHandle: 'b2', target: 'b2', targetHandle: 'right', ...outerEdgeDefaults },
 
-  { id: 'github-b4', source: 'github', sourceHandle: 'b4', target: 'b4', targetHandle: 'left', ...outerEdgeDefaults },
+  { id: 'sources-b4', source: 'sources', sourceHandle: 'b4', target: 'b4', targetHandle: 'left', ...outerEdgeDefaults },
   { id: 'b4-agents', source: 'b4', sourceHandle: 'right', target: 'agents', targetHandle: 'b4', ...outerEdgeDefaults },
 
   { id: 'b1-b3', source: 'b1', sourceHandle: 'bottom-source', target: 'b3', targetHandle: 'top-target', ...innerEdgeDefaults },
