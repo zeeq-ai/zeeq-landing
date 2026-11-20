@@ -6,17 +6,13 @@ compatibility: This skill is best used with the Firebase CLI, but does not requi
 
 # Remote Config
 
-This skill provides a complete guide for getting started with Remote Config on
-Android or iOS. Remote Config allows you to change the behavior and appearance
-of your app without publishing an app update by maintaining a cloud-based
-configuration template.
+This skill covers Firebase Remote Config template management through the
+Firebase CLI.
 
 ## Prerequisites
 
-Provisioning Remote Config requires both a Firebase project and a Firebase app,
-either Android or iOS. To manage the Remote Config template and conditions via
-the command line, use the Firebase CLI. See the `firebase-basics` skill for
-references on project initialization.
+Remote Config template management requires a Firebase project and the Firebase
+CLI. See the `firebase-basics` skill for project initialization.
 
 ## Troubleshooting Execution
 
@@ -37,14 +33,6 @@ If a command fails because "no active project is selected":
 1. **Prompt for ID**: If logged in but no project is active, ask the user:
    "Please provide your Firebase Project ID to proceed."
 1. **Use Flag**: Append `--project <PROJECT_ID>` to every subsequent command.
-
-## SDK Setup
-
-To learn how to set up Remote Config in your application code, choose your
-platform:
-
-- **Android**: [android_setup.md](references/android_setup.md)
-- **iOS**: [ios_setup.md](references/ios_setup.md)
 
 ## Best Practices and Template Management
 

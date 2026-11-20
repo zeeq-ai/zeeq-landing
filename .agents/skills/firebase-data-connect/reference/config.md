@@ -80,11 +80,6 @@ generate:
   javascriptSdk:
     outputDir: "../web/src/lib/dataconnect"
     package: "@myapp/dataconnect"
-  kotlinSdk:
-    outputDir: "../android/app/src/main/kotlin/com/myapp/dataconnect"
-    package: "com.myapp.dataconnect"
-  swiftSdk:
-    outputDir: "../ios/MyApp/DataConnect"
 ```
 
 ### SDK Generation Options
@@ -92,8 +87,6 @@ generate:
 | SDK             | Fields                                 |
 | --------------- | -------------------------------------- |
 | `javascriptSdk` | `outputDir`, `package`                 |
-| `kotlinSdk`     | `outputDir`, `package`                 |
-| `swiftSdk`      | `outputDir`                            |
 | `nodeAdminSdk`  | `outputDir`, `package` (for Admin SDK) |
 
 ______________________________________________________________________
@@ -183,12 +176,6 @@ Default ports:
 // Web
 import { connectDataConnectEmulator } from 'firebase/data-connect';
 connectDataConnectEmulator(dc, 'localhost', 9399);
-
-// Android
-connector.dataConnect.useEmulator("10.0.2.2", 9399)
-
-// iOS
-connector.useEmulator(host: "localhost", port: 9399)
 
 
 ```

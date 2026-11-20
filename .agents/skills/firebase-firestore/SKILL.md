@@ -57,9 +57,7 @@ corresponding reference guides:
 - **Security Rules**: Read
   [security_rules.md](references/standard/security_rules.md)
 - **SDK Usage**: Read [web_sdk_usage.md](references/standard/web_sdk_usage.md),
-  [android_sdk_usage.md](references/standard/android_sdk_usage.md),
-  [ios_setup.md](references/standard/ios_setup.md), or
-  [flutter_setup.md](references/standard/flutter_setup.md)
+
 - **Indexes**: Read [indexes.md](references/standard/indexes.md)
 
 ### Enterprise Edition / Native Mode (`references/enterprise/`)
@@ -81,9 +79,6 @@ corresponding reference guides:
   > pipeline initialization patterns.
 
   Read [web_sdk_usage.md](references/enterprise/web_sdk_usage.md),
-  [python_sdk_usage.md](references/enterprise/python_sdk_usage.md),
-  [android_sdk_usage.md](references/enterprise/android_sdk_usage.md),
-  [ios_setup.md](references/enterprise/ios_setup.md), or
-  [flutter_setup.md](references/enterprise/flutter_setup.md)
+  [python_sdk_usage.md](references/enterprise/python_sdk_usage.md)
 
 - **Indexes**: Read [indexes.md](references/enterprise/indexes.md)
