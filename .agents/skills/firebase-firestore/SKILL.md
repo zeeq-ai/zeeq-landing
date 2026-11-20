@@ -56,7 +56,7 @@ corresponding reference guides:
 - **Provisioning**: Read [provisioning.md](references/standard/provisioning.md)
 - **Security Rules**: Read
   [security_rules.md](references/standard/security_rules.md)
-- **SDK Usage**: Read [web_sdk_usage.md](references/standard/web_sdk_usage.md),
+- **SDK Usage**: Read [web_sdk_usage.md](references/standard/web_sdk_usage.md)
 
 - **Indexes**: Read [indexes.md](references/standard/indexes.md)
 
