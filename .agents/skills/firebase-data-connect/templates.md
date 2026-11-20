@@ -197,14 +197,6 @@ generate:
   javascriptSdk:
     outputDir: "../web/src/lib/dataconnect"
     package: "@myapp/dataconnect"
-  kotlinSdk:
-    outputDir: "../android/app/src/main/kotlin/com/myapp/dataconnect"
-    package: "com.myapp.dataconnect"
-  swiftSdk:
-    outputDir: "../ios/MyApp/DataConnect"
-  dartSdk:
-    outputDir: "../flutter/lib/dataconnect"
-    package: myapp_dataconnect
 ```
 
 ______________________________________________________________________

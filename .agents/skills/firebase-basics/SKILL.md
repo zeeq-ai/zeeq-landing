@@ -28,8 +28,6 @@ Complete these setup steps before proceeding:
        [references/setup/gemini_cli.md](references/setup/gemini_cli.md)
      - **Antigravity**: Review
        [references/setup/antigravity.md](references/setup/antigravity.md)
-     - **Android Studio**: Review
-       [references/setup/android_studio.md](references/setup/android_studio.md)
      - **Claude Code**: Review
        [references/setup/claude_code.md](references/setup/claude_code.md)
      - **Cursor**: Review
@@ -109,21 +107,8 @@ Adhere to these principles:
      [references/refresh/claude.md](references/refresh/claude.md)
    - **Cursor**: Follow
      [references/refresh/other-agents.md](references/refresh/other-agents.md)
-   - **Android Studio**: Follow
-     [references/refresh/android_studio.md](references/refresh/android_studio.md)
    - **Others**: Follow
      [references/refresh/other-agents.md](references/refresh/other-agents.md)
-1. **Automate Config File Retrieval:** When setting up iOS or Android apps, do
-   NOT direct users to the Firebase Console to download `google-services.json`
-   or `GoogleService-Info.plist`. Instead, use the Firebase CLI to fetch the
-   config programmatically:
-   - For Android:
-     `npx -y firebase-tools@latest apps:sdkconfig ANDROID <APP_ID> --project <PROJECT_ID>`
-   - For iOS:
-     `npx -y firebase-tools@latest apps:sdkconfig IOS <APP_ID> --project <PROJECT_ID>`
-     Save the output to the appropriate location (e.g.,
-     `app/google-services.json` for Android, or a path to be linked by
-     `xcode-project-setup` for iOS).
 
 # References
 
@@ -135,8 +120,6 @@ Adhere to these principles:
   discover and understand CLI functionality.
 - **SDK Setup:** For detailed guides on adding Firebase to your app:
   - **Web**: See [references/web_setup.md](references/web_setup.md)
-  - **Android**: See [references/android_setup.md](references/android_setup.md)
-  - **iOS**: See [references/ios_setup.md](references/ios_setup.md)
 
 # Common Issues
 

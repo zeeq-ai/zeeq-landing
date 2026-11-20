@@ -24,7 +24,7 @@ List queries require explicit `@refresh` to tell SQL Connect which mutations
 affect the result set.
 
 Clients consume all three using `subscribe()` instead of `execute()`. See
-[sdks.md](sdks.md) for per-platform subscribe patterns.
+[sdk_web.md](sdk_web.md) for web subscribe patterns.
 
 ______________________________________________________________________
 

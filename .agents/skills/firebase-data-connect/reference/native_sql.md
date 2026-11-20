@@ -56,8 +56,8 @@ client response cleaner (`data.movies` instead of `data._select`).
 
 > **Note on `Any` Return Types:** Because Native SQL completely bypasses
 > GraphQL's strong typing, queries like `_select` and `_executeReturning` return
-> the generic `Any` scalar type. The generated client SDKs (TypeScript, Swift,
-> Kotlin, Dart) will type this as `any` (or equivalent). **AGENT INSTRUCTION**:
+> the generic `Any` scalar type. The generated JavaScript SDK types this as
+> `any`. **AGENT INSTRUCTION**:
 > When you generate client-side code that consumes these operations, you MUST
 > manually cast or validate the shape of the data, as the typical type safety of
 > SQL Connect will not be present.

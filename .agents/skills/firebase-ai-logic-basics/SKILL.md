@@ -8,11 +8,11 @@ version: 1.0.1
 
 ## Overview
 
-Firebase AI Logic is a product of Firebase that allows developers to add gen AI
-to their mobile and web apps using client-side SDKs. You can call Gemini models
+Firebase AI Logic is a Firebase product that lets developers add generative AI
+to web apps using the Firebase Web SDK. You can call Gemini models
 directly from your app without managing a dedicated backend. Firebase AI Logic,
 which was previously known as "Vertex AI for Firebase", represents the evolution
-of Google's AI integration platform for mobile and web developers.
+of Google's AI integration platform for web developers.
 
 It supports the two Gemini API providers:
 
@@ -30,11 +30,9 @@ application requires it.
 
 - Before starting, ensure you have **Node.js 16+** and npm installed. Install
   them if they aren’t already available.
-- Identify the platform the user is interested in building on prior to starting:
-  Android, iOS, Flutter or Web.
-- If their platform is unsupported, Direct the user to Firebase Docs to learn
-  how to set up AI Logic for their application (share this link with the user
-  https://firebase.google.com/docs/ai-logic/get-started)
+- This skill covers the Firebase Web SDK. For other platforms, direct the user
+  to the official Firebase AI Logic documentation:
+  https://firebase.google.com/docs/ai-logic/get-started.
 
 ### Installation
 
@@ -101,8 +99,7 @@ faster display of results.
 
 ## Supported Platforms and Frameworks
 
-Supported Platforms and Frameworks include Kotlin and Java for Android, Swift
-for iOS, JavaScript for web apps, Dart for Flutter, and C Sharp for Unity.
+This skill documents the JavaScript Firebase Web SDK.
 
 ## Advanced Features
 
@@ -137,19 +134,15 @@ version string). Use Firebase Remote Config to update model versions dynamically
 without deploying new client code. See
 [Changing model names remotely](https://firebase.google.com/docs/ai-logic/change-model-name-remotely.md.txt)
 
-> [!WARNING] **CRITICAL: Backend Provisioning Required** For all platforms
-> (Flutter, Android, iOS, Web), you MUST run `npx firebase-tools init ailogic`
-> to provision the service. `flutterfire configure` ONLY handles client
-> configuration and does NOT enable the AI service, leading to
-> `PERMISSION_DENIED` errors.
+> [!WARNING] **Backend Provisioning Required** Run
+> `npx firebase-tools init ailogic` to provision the service before calling it
+> from the Web SDK.
 
 ## Initialization Code References
 
 | Language, Framework, Platform | Gemini API provider                  | Context URL                                     |
 | :---------------------------- | :----------------------------------- | :---------------------------------------------- |
 | Web Modular API               | Gemini Developer API (Developer API) | firebase://docs/ai-logic/get-started            |
-| iOS (Swift)                   | Gemini Developer API                 | [ios_setup.md](references/ios_setup.md)         |
-| Flutter (Dart)                | Gemini Developer API                 | [flutter_setup.md](references/flutter_setup.md) |
 
 > [!WARNING] **CRITICAL: Use current model names:** Always check the
 > [Firebase AI Logic Models documentation](https://firebase.google.com/docs/ai-logic/models.md.txt)
@@ -159,7 +152,3 @@ without deploying new client code. See
 ## References
 
 [Web SDK code examples and usage patterns](references/usage_patterns_web.md)
-[iOS SDK code examples and usage patterns](references/ios_setup.md)
-[Flutter SDK code examples and usage patterns](references/flutter_setup.md)
-
-[Android (Kotlin) SDK usage patterns](references/usage_patterns_android.md)
