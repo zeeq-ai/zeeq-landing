@@ -123,7 +123,7 @@ const showcaseByPath: Record<string, ShowcaseContent> = {
       'Shared standards, cross-service context, review backstops, and value tracking.',
     paragraphs: [
       'Enterprise codebases span many services and standards. Zeeq composes org-wide guidance with service-specific architecture and operational context.',
-      'MCP keeps Zeeq independent of the agent harness. Teams keep local workflows while leadership gets a consistent layer for knowledge, reviews, and telemetry.',
+      'MCP keeps Zeeq independent of the agent harness. Teams using Claude Code, Codex, Cursor, or Antigravity keep local workflows while leadership gets a consistent layer for knowledge, reviews, and telemetry.',
       'Strong patterns spread through reusable libraries while local context stays scoped. Session telemetry links AI usage back to delivery outcomes.',
     ],
   },
