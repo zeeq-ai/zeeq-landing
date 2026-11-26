@@ -81,7 +81,7 @@
     <UPageSection
       id="ecosystem"
       title="One Pane of Glass, Every Agent"
-      description="Whatever your teams run — Claude Code, Cursor, Codex, Copilot — Zeeq sits underneath and reports what's actually happening: which tools fire, which docs get read, which findings get fixed. No shadow AI, no blind spots."
+      description="Whatever your teams run — Claude Code, Cursor, Codex, Copilot, Antigravity — Zeeq sits underneath and reports what's actually happening: which tools fire, which docs get read, which findings get fixed. No shadow AI, no blind spots."
     >
       <template #body>
         <ClientOnly>
@@ -172,7 +172,7 @@ const agentFlowFallbackGroups = [
   {
     title: 'Agent harnesses',
     description:
-      'Codex, Claude Code, Cursor, and OpenCode connect through the same enterprise layer.',
+      'Codex, Claude Code, Cursor, OpenCode, and Antigravity connect through the same enterprise layer.',
   },
   {
     title: 'Zeeq platform',
@@ -190,7 +190,7 @@ const carouselItems = [
   {
     title: 'Token and cost visibility per developer',
     narrative:
-      'Track token usage and approximate spend by model, by user, and over time across every harness your team runs — Claude, Codex, Cursor, and anything else that speaks MCP.  Link token spend to actual value creation by feature.',
+      'Track token usage and approximate spend by model, by user, and over time across every harness your team runs — Claude, Codex, Cursor, Antigravity, and anything else that speaks MCP.  Link token spend to actual value creation by feature.',
     description:
       'Where tokens are being spent, which features are being built, by whom',
     src: '/screens/carousel/session-token-telemetry.webp',
@@ -397,7 +397,7 @@ const features = [
     icon: 'i-hugeicons-user-group-02',
     title: 'Fits the stack you already have',
     description:
-      'Low-ceremony rollout across Claude Code, Cursor, Codex, Copilot, and whatever else your teams run - one harness or ten; it just works.',
+      'Low-ceremony rollout across Claude Code, Cursor, Codex, Copilot, Antigravity, and whatever else your teams run - one harness or ten; it just works.',
   },
 ]
 </script>

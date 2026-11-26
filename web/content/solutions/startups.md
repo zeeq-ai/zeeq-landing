@@ -42,7 +42,7 @@ description: Use Zeeq to keep agents grounded in your product decisions, enginee
 features:
   - icon: i-lucide-rocket
     title: Fast setup
-    description: Connect the agent harnesses your team already uses and start grounding sessions in shared project knowledge. A startup team can improve agent output quickly without pausing product delivery for a heavy platform rollout.
+    description: Connect the agent harnesses your team already uses, including Antigravity, and start grounding sessions in shared project knowledge. A startup team can improve agent output quickly without pausing product delivery for a heavy platform rollout.
   - icon: i-lucide-brain
     title: Product memory
     description: Preserve architecture decisions, product constraints, and review learnings so agents do not relearn context from scratch. As the team grows, new contributors and agents inherit the same operating context that shaped earlier product decisions.
